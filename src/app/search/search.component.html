@@ -1,0 +1,13 @@
+<p class="lead text-center">英文单词模糊搜索</p>
+<input class="form-control" #box (keyup)="onKey(box.value)" />
+<div class="result-wrap" *ngIf="query">
+  <div *ngIf="entries.length">
+    <h5 class="text-center">搜索结果({{ entries.length }})</h5>
+    <dl class="list-group">
+      <div class="list-group-item" *ngFor="let item of entries" (click)="gotoDetail(item)">
+        <dt>{{ item.entry }}</dt>
+        <dd>{{ item.explain }}</dd>
+      </div>
+    </dl>
+  </div>
+</div>
