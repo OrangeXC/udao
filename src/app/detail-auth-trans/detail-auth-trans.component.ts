@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core'
+import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap'
 
 @Component({
   selector: 'app-detail-auth-trans',
@@ -9,12 +9,12 @@ import { NgbRatingConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 
 export class DetailAuthTransComponent {
-  public isCollapsed = true;
+  public isCollapsed = true
 
   constructor(config: NgbRatingConfig) {
     // customize default values of ratings used by this component tree
-    config.max = 5;
-    config.readonly = true;
+    config.max = 5
+    config.readonly = true
   }
 
   @Input() ec21

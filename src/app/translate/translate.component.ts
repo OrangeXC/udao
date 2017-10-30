@@ -30,7 +30,7 @@ export class TranslateComponent {
     // after can use https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md
     let apiURL = encodeURIComponent(`https://fanyi.youdao.com/openapi.do?keyfrom=f2ec-org&key=1787962561&type=data&doctype=json&version=1.1&q=${value}`)
 
-    this.http.get(`http://127.0.0.1:3001?url=${apiURL}`)
+    this.http.get(`/?url=${apiURL}`)
       .subscribe(data => {
         this.query = data['query']
 

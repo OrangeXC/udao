@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router,  ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Component, OnInit } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { Router,  ActivatedRoute, NavigationEnd } from '@angular/router'
 
 @Component({
   selector: 'app-detail',
   templateUrl: './detail.component.html',
   styleUrls: ['./detail.component.css']
 })
+
 export class DetailComponent implements OnInit {
   public word = ''
 
@@ -68,7 +69,7 @@ export class DetailComponent implements OnInit {
     this.route.params.subscribe((params) => {
       const apiURL = `https://dict.youdao.com/jsonapi?q=${params['word']}`
 
-      this.http.get(`http://127.0.0.1:3001?url=${encodeURIComponent(apiURL)}`)
+      this.http.get(`/?url=${encodeURIComponent(apiURL)}`)
       .subscribe(res => {
         this.simple = res['simple']
         this.ec = res['ec']['word'][0]['trs'].map(item => item['tr'][0]['l']['i'][0])
