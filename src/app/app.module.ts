@@ -11,6 +11,11 @@ import { TranslateComponent } from './translate/translate.component';
 import { HomeComponent } from './home/home.component';
 import { SearchComponent } from './search/search.component';
 import { DetailComponent } from './detail/detail.component';
+import { DetailPhrsListTabComponent } from './detail-phrs-list-tab/detail-phrs-list-tab.component';
+import { DetailWebTransComponent } from './detail-web-trans/detail-web-trans.component';
+import { DetailAuthTransComponent } from './detail-auth-trans/detail-auth-trans.component';
+import { DetailTransformComponent } from './detail-transform/detail-transform.component';
+import { DetailExamplesComponent } from './detail-examples/detail-examples.component';
 
 const routes: Routes = [
   {
@@ -35,7 +40,12 @@ const routes: Routes = [
     TranslateComponent,
     HomeComponent,
     SearchComponent,
-    DetailComponent
+    DetailComponent,
+    DetailPhrsListTabComponent,
+    DetailWebTransComponent,
+    DetailAuthTransComponent,
+    DetailTransformComponent,
+    DetailExamplesComponent
   ],
   imports: [
     BrowserModule,

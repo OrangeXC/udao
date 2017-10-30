@@ -32,7 +32,7 @@ export class DetailComponent implements OnInit {
   public ec21 = []
 
   // 柯林斯英汉双解大辞典
-  public collins = []
+  public collins = {}
 
   // 朗文当代高级英语辞典内容
   public longman = {}
@@ -44,7 +44,7 @@ export class DetailComponent implements OnInit {
   public syno = []
 
   // 同根词
-  public relWord = []
+  public relWord = {}
 
   // 双语例句
   public blngSentsPart = []
@@ -53,7 +53,7 @@ export class DetailComponent implements OnInit {
   public authSentsPart = []
 
   // 原声例句
-  public media_sents_part = []
+  public mediaSentsPart = []
 
   // 百科
   public wiki = {}
@@ -75,6 +75,14 @@ export class DetailComponent implements OnInit {
         this.webTrans = res['web_trans']['web-translation']
         this.special = res['special']
         this.ee = res['ee']
+        this.ec21 = res['ec21']['word']
+        this.collins = res['collins']['collins_entries'][0]
+        this.phrs = res['phrs']['phrs']
+        this.syno = res['syno']['synos']
+        this.relWord = res['rel_word']
+        this.blngSentsPart = res['blng_sents_part']['sentence-pair']
+        this.authSentsPart = res['auth_sents_part']['sent']
+        this.mediaSentsPart = res['media_sents_part']['sent']
       })
     })
   }
