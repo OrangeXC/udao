@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { Router } from '@angular/router';
+import { Component } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-search',
@@ -30,7 +30,7 @@ export class SearchComponent {
     // after can use https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md
     let apiURL = encodeURIComponent(`http://dict.youdao.com/suggest?q=${value}&le=eng&num=20&doctype=json`)
 
-    this.http.get(`http://127.0.0.1:3001?url=${apiURL}`)
+    this.http.get(`/?url=${apiURL}`)
       .subscribe(res => {
         const data = res['data']
 
@@ -47,6 +47,6 @@ export class SearchComponent {
   }
 
   gotoDetail ({ entry }) {
-    this.router.navigate([`/detail/${entry}`]);
+    this.router.navigate([`/detail/${entry}`])
   }
 }
