@@ -13,6 +13,7 @@ export class TranslateComponent {
   public explains = []
   public translation = []
   public web = []
+  public loading = false
 
   constructor(
     private http: HttpClient
@@ -25,6 +26,8 @@ export class TranslateComponent {
     this.explains = []
     this.translation = []
     this.web = []
+
+    this.loading = true
 
     // before 2017-12
     // after can use https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md
@@ -45,6 +48,8 @@ export class TranslateComponent {
         if (data['web']) {
           this.web = data['web']
         }
+
+        this.loading = false
       });
   }
 }

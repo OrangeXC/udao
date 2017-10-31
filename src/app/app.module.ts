@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core'
 import { HttpClientModule, HttpRequest, HttpInterceptor, HttpHandler, HttpEvent, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { Routes, RouterModule }   from '@angular/router'
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap'
+import { LoadingModule } from 'ngx-loading'
 import { Observable } from 'rxjs/Observable'
 
 import { AppComponent } from './app.component'
@@ -65,7 +66,8 @@ export class ExampleInterceptor implements HttpInterceptor {
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    LoadingModule
   ],
   providers: [
     AppComponent,
