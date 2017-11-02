@@ -59,6 +59,8 @@ export class DetailComponent implements OnInit {
   // 百科
   public wiki = {}
 
+  public loading = false
+
   constructor(
     private http: HttpClient,
     private route: ActivatedRoute,
@@ -67,6 +69,8 @@ export class DetailComponent implements OnInit {
 
   ngOnInit () {
     this.route.params.subscribe((params) => {
+      this.loading = true
+
       const apiURL = `https://dict.youdao.com/jsonapi?q=${params['word']}`
 
       this.http.get(`/?url=${encodeURIComponent(apiURL)}`)
@@ -84,6 +88,8 @@ export class DetailComponent implements OnInit {
         this.blngSentsPart = res['blng_sents_part']['sentence-pair']
         this.authSentsPart = res['auth_sents_part']['sent']
         this.mediaSentsPart = res['media_sents_part']['sent']
+
+        this.loading = false
       })
     })
   }

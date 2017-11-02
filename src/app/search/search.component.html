@@ -1,3 +1,4 @@
+<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
 <p class="lead text-center">英文单词模糊搜索</p>
 <input class="form-control" #box (keyup)="onKey(box.value)" />
 <div class="result-wrap" *ngIf="query">
