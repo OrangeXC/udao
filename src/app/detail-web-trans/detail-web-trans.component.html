@@ -1,5 +1,5 @@
 <ngb-tabset>
-  <ngb-tab title="网络释义" *ngIf="webTrans">
+  <ngb-tab title="网络释义" *ngIf="webTrans && webTrans.length">
     <ng-template ngbTabContent>
       <ngb-accordion *ngIf="webTrans.length" activeIds="static-0">
         <ngb-panel *ngFor="let item of webTrans[0].trans; index as i" ngf id="static-{{i}}" title="{{item.value}}">
@@ -8,20 +8,21 @@
           </ng-template>
         </ngb-panel>
       </ngb-accordion>
-      <div class="mt-3" *ngIf="webTrans.length">
+      <div class="mt-3" *ngIf="webTrans.length > 1">
         <h5>短语</h5>
         <ng-template ngFor let-item [ngForOf]="webTrans" let-index="index">
           <p *ngIf="index > 0">
             <a class="mr-2" [routerLink]="['/detail', item.key]">{{ item.key }}</a>
             <ng-template ngFor let-trans [ngForOf]="item.trans" let-i="index">
-              {{ trans.value }}<ng-template [ngIf]="item.trans.length !== i + 1">；</ng-template>
+              <span *ngIf="trans.value">{{ trans.value }}</span>
+              <ng-template [ngIf]="item.trans.length !== i + 1">；</ng-template>
             </ng-template>
           </p>
         </ng-template>
       </div>
     </ng-template>
   </ngb-tab>
-  <ngb-tab title="专业释义" *ngIf="special">
+  <ngb-tab title="专业释义" *ngIf="special && special.entries">
     <ng-template ngbTabContent>
       <ngb-tabset type="pills">
         <ng-template ngFor let-item [ngForOf]="special.entries" let-i="index">
@@ -37,7 +38,7 @@
           </ngb-tab>
         </ng-template>
       </ngb-tabset>
-      <small class="text-muted">
+      <small class="text-muted" *ngIf="special.summary && special.summary.text">
         ·{{ special.summary.text }}
         <a href="{{ special.summary.sources.source.url }}" target="_blank">
           {{ special.summary.sources.source.site }}
@@ -45,7 +46,7 @@
       </small>
     </ng-template>
   </ngb-tab>
-  <ngb-tab title="英英释义" *ngIf="ee">
+  <ngb-tab title="英英释义" *ngIf="ee && ee.word">
     <ng-template ngbTabContent>
       <h6>{{ ee.word.speech }} <span class="text-muted" *ngIf="ee.word.phone">[{{ ee.word.phone }}]</span></h6>
       <ng-template ngFor let-item [ngForOf]="ee.word.trs">

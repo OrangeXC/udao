@@ -9,7 +9,7 @@ import { Router,  ActivatedRoute, NavigationEnd } from '@angular/router'
 })
 
 export class DetailComponent implements OnInit {
-  public word = ''
+  public input = ''
 
   // 单词与音标
   public simple = {
@@ -75,19 +75,54 @@ export class DetailComponent implements OnInit {
 
       this.http.get(`/?url=${encodeURIComponent(apiURL)}`)
       .subscribe(res => {
-        this.simple = res['simple']
-        this.ec = res['ec']['word'][0]['trs'].map(item => item['tr'][0]['l']['i'][0])
-        this.webTrans = res['web_trans']['web-translation']
-        this.special = res['special']
-        this.ee = res['ee']
-        this.ec21 = res['ec21']['word']
-        this.collins = res['collins']['collins_entries'][0]
-        this.phrs = res['phrs']['phrs']
-        this.syno = res['syno']['synos']
-        this.relWord = res['rel_word']
-        this.blngSentsPart = res['blng_sents_part']['sentence-pair']
-        this.authSentsPart = res['auth_sents_part']['sent']
-        this.mediaSentsPart = res['media_sents_part']['sent']
+        this.input = res['input']
+
+        this.simple = res['simple'] ? res['simple'] : {
+          query: '',
+          word: [{}]
+        }
+
+        this.ec = res['ec'] && res['ec']['word'] && res['ec']['word'][0] && Array.isArray(res['ec']['word'][0]['trs'])
+          ? res['ec']['word'][0]['trs'].map(item => item['tr'][0]['l']['i'][0])
+          : []
+
+        this.webTrans = res['web_trans'] && res['web_trans']['web-translation']
+          ? res['web_trans']['web-translation']
+          : []
+
+        this.special = res['special'] ? res['special'] : {}
+
+        this.ee = res['ee'] ? res['ee'] : {}
+
+        this.ec21 = res['ec21'] && res['ec21']['word']
+          ? res['ec21']['word']
+          : []
+
+        this.collins = res['collins'] && res['collins']['collins_entries'] && res['collins']['collins_entries'][0]
+          ? res['collins']['collins_entries'][0]
+          : {}
+
+        this.phrs = res['phrs'] && res['phrs']['phrs']
+          ? res['phrs']['phrs']
+          : []
+
+        this.syno = res['syno'] && res['syno']['synos']
+          ? res['syno']['synos']
+          : []
+
+        this.relWord = res['rel_word'] ? res['rel_word'] : {}
+
+        this.blngSentsPart = res['blng_sents_part'] && res['blng_sents_part']['sentence-pair']
+          ? res['blng_sents_part']['sentence-pair']
+          : []
+
+        this.authSentsPart = res['auth_sents_part'] && res['auth_sents_part']['sent']
+          ? res['auth_sents_part']['sent']
+          : []
+
+        this.mediaSentsPart = res['media_sents_part'] && res['media_sents_part']['sent']
+          ? res['media_sents_part']['sent']
+          : []
 
         this.loading = false
       })

@@ -59,7 +59,7 @@
           </ng-template>
         </ngb-rating>
         <b class="ml-3">{{ collins['basic_entries']['basic_entry'][0].cet }}</b>
-        <small class="text-muted ml-3">(
+        <small class="text-muted ml-3" *ngIf="collins['basic_entries']['basic_entry'][0].wordforms.wordform">(
           <ng-template ngFor let-wordform [ngForOf]="collins['basic_entries']['basic_entry'][0].wordforms.wordform" let-isLast="last">
             {{ wordform.word }}<ng-template [ngIf]="!isLast">, </ng-template>
           </ng-template>
