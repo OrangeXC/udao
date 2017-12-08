@@ -1,40 +1,34 @@
-<ngb-tabset>
-  <ngb-tab title="双语例句" *ngIf="blngSentsPart && blngSentsPart.length">
-    <ng-template ngbTabContent>
-      <ol>
-        <li *ngFor="let item of blngSentsPart">
-          <p [innerHTML]="item['sentence-eng']"></p>
-          <p>{{ item['sentence-translation'] }}</p>
-          <p class="text-muted"><small>{{ item.source }}</small></p>
-        </li>
-      </ol>
-    </ng-template>
-  </ngb-tab>
-  <ngb-tab title="原声例句" *ngIf="mediaSentsPart && mediaSentsPart.length">
-    <ng-template ngbTabContent>
-      <ol>
-        <li *ngFor="let item of mediaSentsPart">
-          <p [innerHTML]="item.eng"></p>
-          <audio *ngIf="item['@mediatype'] === 'audio'" src="{{ item.snippets.snippet[0].streamUrl }}"></audio>
-          <video *ngIf="item['@mediatype'] === 'video'" src="{{ item.snippets.snippet[0].streamUrl.slice(6) }}" poster="{{ item.snippets.snippet[0].imageUrl }}"></video>
-          <p class="text-muted">
-            <a *ngIf="item.snippets.snippet[0].sourceUrl" href="{{ item.snippets.snippet[0].sourceUrl }}" target="_blank">
-              <small class="text-muted">{{ item.snippets.snippet[0].source }} {{ item.snippets.snippet[0].name }}</small>
-            </a>
-            <small *ngIf="!item.snippets.snippet[0].sourceUrl">{{ item.snippets.snippet[0].source }} {{ item.snippets.snippet[0].name }}</small>
-          </p>
-        </li>
-      </ol>
-    </ng-template>
-  </ngb-tab>
-  <ngb-tab title="权威例句" *ngIf="authSentsPart && authSentsPart.length">
-    <ng-template ngbTabContent>
-      <ol>
-        <li *ngFor="let item of authSentsPart">
-          <p [innerHTML]="item.foreign"></p>
-          <p class="text-muted"><small [innerHTML]="item.source"></small></p>
-        </li>
-      </ol>
-    </ng-template>
-  </ngb-tab>
-</ngb-tabset>
+<mat-tab-group>
+  <mat-tab label="双语例句" *ngIf="blngSentsPart && blngSentsPart.length">
+    <ol>
+      <li *ngFor="let item of blngSentsPart">
+        <p [innerHTML]="item['sentence-eng']"></p>
+        <p>{{ item['sentence-translation'] }}</p>
+        <p class="text-muted"><small>{{ item.source }}</small></p>
+      </li>
+    </ol>
+  </mat-tab>
+  <mat-tab label="原声例句" *ngIf="mediaSentsPart && mediaSentsPart.length">
+    <ol>
+      <li *ngFor="let item of mediaSentsPart">
+        <p [innerHTML]="item.eng"></p>
+        <audio *ngIf="item['@mediatype'] === 'audio'" src="{{ item.snippets.snippet[0].streamUrl }}"></audio>
+        <video *ngIf="item['@mediatype'] === 'video'" src="{{ item.snippets.snippet[0].streamUrl.slice(6) }}" poster="{{ item.snippets.snippet[0].imageUrl }}"></video>
+        <p class="text-muted">
+          <a *ngIf="item.snippets.snippet[0].sourceUrl" href="{{ item.snippets.snippet[0].sourceUrl }}" target="_blank">
+            <small class="text-muted">{{ item.snippets.snippet[0].source }} {{ item.snippets.snippet[0].name }}</small>
+          </a>
+          <small *ngIf="!item.snippets.snippet[0].sourceUrl">{{ item.snippets.snippet[0].source }} {{ item.snippets.snippet[0].name }}</small>
+        </p>
+      </li>
+    </ol>
+  </mat-tab>
+  <mat-tab label="权威例句" *ngIf="authSentsPart && authSentsPart.length">
+    <ol>
+      <li *ngFor="let item of authSentsPart">
+        <p [innerHTML]="item.foreign"></p>
+        <p class="text-muted"><small [innerHTML]="item.source"></small></p>
+      </li>
+    </ol>
+  </mat-tab>
+</mat-tab-group>
