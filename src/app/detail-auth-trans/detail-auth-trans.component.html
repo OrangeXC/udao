@@ -1,25 +1,25 @@
-<ngb-tabset>
-  <ngb-tab title="21世纪大英汉词典" *ngIf="ec21 && ec21.length">
-    <ng-template ngbTabContent>
-      <p>
-        <b>{{ ec21[0]['return-phrase'].l.i[0] }}</b>
-        <span class="text-muted">[{{ ec21[0].phone }}]</span>
-      </p>
-      <ng-template ngFor let-trs [ngForOf]="ec21[0].trs">
-        <p>{{ trs.pos }}</p>
-        <ol>
-          <ng-template ngFor let-tr [ngForOf]="trs.tr">
-            <li *ngIf="tr.l.i">
-              <p>{{ tr.l.i[0] }}</p>
-              <ng-template ngFor let-exam [ngForOf]="tr.exam">
-                <p class="text-muted">{{ exam.i.f.l.i }}</p>
-                <p class="text-muted">{{ exam.i.n.l.i }}</p>
-              </ng-template>
-            </li>
-          </ng-template>
-        </ol>
-      </ng-template>
-      <div *ngFor="let item of ec21; index as i" [ngbCollapse]="isCollapsed">
+<mat-tab-group>
+  <mat-tab label="21世纪大英汉词典" *ngIf="ec21 && ec21.length">
+    <p>
+      <b>{{ ec21[0]['return-phrase'].l.i[0] }}</b>
+      <span class="text-muted">[{{ ec21[0].phone }}]</span>
+    </p>
+    <ng-template ngFor let-trs [ngForOf]="ec21[0].trs">
+      <p>{{ trs.pos }}</p>
+      <ol>
+        <ng-template ngFor let-tr [ngForOf]="trs.tr">
+          <li *ngIf="tr.l.i">
+            <p>{{ tr.l.i[0] }}</p>
+            <ng-template ngFor let-exam [ngForOf]="tr.exam">
+              <p class="text-muted">{{ exam.i.f.l.i }}</p>
+              <p class="text-muted">{{ exam.i.n.l.i }}</p>
+            </ng-template>
+          </li>
+        </ng-template>
+      </ol>
+    </ng-template>
+    <div *ngIf="!isCollapsed">
+      <div *ngFor="let item of ec21; index as i">
         <ng-template [ngIf]="i > 0">
           <p>
             <b>{{ item['return-phrase'].l.i[0] }}</b>
@@ -39,42 +39,37 @@
           </ng-template>
         </ng-template>
       </div>
-      <button type="button"
-        class="btn btn-link"
-        (click)="isCollapsed = !isCollapsed"
-        [attr.aria-expanded]="!isCollapsed">
-        {{ isCollapsed ? '更多结果' :  '收起结果' }}
-      </button>
-      <small class="text-muted">以上来源于：《21世纪大英汉词典》</small>
-    </ng-template>
-  </ngb-tab>
-  <ngb-tab title="柯林斯英汉双解大词典" *ngIf="collins && collins.headword">
-    <ng-template ngbTabContent>
-      <p>
-        <b class="text-danger mr-2">{{ collins.headword }}</b>
-        <i class="text-muted mr-3">{{ collins.phonetic }}</i>
-        <ngb-rating [rate]="collins.star">
-          <ng-template let-fill="fill">
-            <span class="star" [class.filled]="fill === 100">&#9733;</span>
-          </ng-template>
-        </ngb-rating>
-        <b class="ml-3">{{ collins['basic_entries']['basic_entry'][0].cet }}</b>
-        <small class="text-muted ml-3" *ngIf="collins['basic_entries']['basic_entry'][0].wordforms.wordform">(
-          <ng-template ngFor let-wordform [ngForOf]="collins['basic_entries']['basic_entry'][0].wordforms.wordform" let-isLast="last">
-            {{ wordform.word }}<ng-template [ngIf]="!isLast">, </ng-template>
-          </ng-template>
-        )</small>
-      </p>
-      <ol>
-        <li *ngFor="let entry of collins.entries.entry">
-          <p>{{ entry['tran_entry'][0]['pos_entry'].pos }} <span class="text-success" [innerHTML]="entry['tran_entry'][0].tran"></span></p>
-          <ng-template ngFor let-exam [ngForOf]="entry['tran_entry'][0]['exam_sents']['sent']">
-            <p>例：</p>
-            <p>{{ exam.eng_sent }}</p>
-            <p>{{ exam.chn_sent }}</p>
-          </ng-template>
-        </li>
-      </ol>
-    </ng-template>
-  </ngb-tab>
-</ngb-tabset>
+    </div>
+    <button mat-raised-button
+      color="primary"
+      class="btn btn-link"
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="isCollapsed">
+      {{ isCollapsed ? '更多结果' :  '收起结果' }}
+    </button>
+    <small class="text-muted">以上来源于：《21世纪大英汉词典》</small>
+  </mat-tab>
+  <mat-tab label="柯林斯英汉双解大词典" *ngIf="collins && collins.headword">
+    <p>
+      <b class="text-danger">{{ collins.headword }}</b> -
+      <i class="text-muted">{{ collins.phonetic }}</i> -
+      <b>{{collins.star}}⭐</b> -
+      <b>{{ collins['basic_entries']['basic_entry'][0].cet }}</b> -
+      <small class="text-muted" *ngIf="collins['basic_entries']['basic_entry'][0].wordforms.wordform">(
+        <ng-template ngFor let-wordform [ngForOf]="collins['basic_entries']['basic_entry'][0].wordforms.wordform" let-isLast="last">
+          {{ wordform.word }}<ng-template [ngIf]="!isLast">, </ng-template>
+        </ng-template>
+      )</small>
+    </p>
+    <ol>
+      <li *ngFor="let entry of collins.entries.entry">
+        <p>{{ entry['tran_entry'][0]['pos_entry'].pos }} <span class="text-success" [innerHTML]="entry['tran_entry'][0].tran"></span></p>
+        <ng-template ngFor let-exam [ngForOf]="entry['tran_entry'][0]['exam_sents']['sent']">
+          <p>例：</p>
+          <p>{{ exam.eng_sent }}</p>
+          <p>{{ exam.chn_sent }}</p>
+        </ng-template>
+      </li>
+    </ol>
+  </mat-tab>
+</mat-tab-group>

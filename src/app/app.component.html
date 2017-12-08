@@ -1,5 +1,30 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<app-navbar></app-navbar>
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="home-container" [class.home-is-mobile]="mobileQuery.matches">
+  <mat-toolbar color="primary" class="home-toolbar">
+    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+    <h1 class="home-app-name">Udao translate</h1>
+    <span class="toolbar-spacer"></span>
+    <a class="github-button" href="https://github.com/OrangeXC/udao" data-size="large" data-show-count="true" aria-label="Star OrangeXC/udao on GitHub">Star</a>
+  </mat-toolbar>
+
+  <mat-sidenav-container class="home-sidenav-container"
+                         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav #snav
+                 [mode]="mobileQuery.matches ? 'over' : 'side'"
+                 [fixedInViewport]="mobileQuery.matches"
+                 fixedTopGap="56"
+                 [opened]="mobileQuery.matches ? false : true">
+      <mat-nav-list>
+        <ul class="side-nav">
+          <li *ngFor="let item of navList">
+            <a mat-list-item routerLink="{{ item.link }}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><mat-icon>{{ item.icon }}</mat-icon> {{ item.name }}</a>
+          </li>
+        </ul>
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
 </div>

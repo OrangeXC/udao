@@ -1,14 +1,18 @@
-<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
-<p class="lead text-center">英文单词模糊搜索</p>
-<input class="form-control" #box (keyup)="onKey(box.value)" />
-<div class="result-wrap" *ngIf="query">
-  <div *ngIf="entries.length">
-    <h5 class="text-center">搜索结果({{ entries.length }})</h5>
-    <dl class="list-group">
-      <div class="list-group-item" *ngFor="let item of entries" (click)="gotoDetail(item)">
-        <dt>{{ item.entry }}</dt>
-        <dd>{{ item.explain }}</dd>
-      </div>
-    </dl>
+<ngx-loading [show]="loading"></ngx-loading>
+<div class="main-content">
+  <p class="lead text-center">英文单词模糊搜索</p>
+  <mat-form-field class="full-width">
+    <input matInput placeholder="请输入模糊搜索关键字" #box (keyup.enter)="onKey(box.value)">
+  </mat-form-field>
+  <div class="result-wrap" *ngIf="query">
+    <div *ngIf="entries.length">
+      <h5 class="text-center">搜索结果({{ entries.length }})</h5>
+      <mat-list>
+        <mat-list-item *ngFor="let item of entries" (click)="gotoDetail(item)">
+          <h3 matLine> {{ item.entry }} </h3>
+          <p matLine> {{ item.explain }} </p>
+        </mat-list-item>
+      </mat-list>
+    </div>
   </div>
 </div>

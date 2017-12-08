@@ -1,16 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
-
-@import "https://cdn.bootcss.com/bootstrap/4.0.0-beta/css/bootstrap.min.css";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 body {
-  padding-top: 80px;
+  font-family: Roboto, Arial, sans-serif;
+  margin: 0;
 }
 
-.starter-template {
-   padding: 3rem 1.5rem;
-   text-align: center;
+.main-content {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 10px;
 }
 
-.tab-content {
-  margin-top: 10px;
+.text-muted {
+  color: #868e96;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+.text-success {
+  color: #28a745;
 }

@@ -1,6 +1,8 @@
-<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
-<app-detail-phrs-list-tab [input]="input" [simple]="simple" [ec]="ec"></app-detail-phrs-list-tab>
-<app-detail-web-trans [webTrans]="webTrans" [special]="special" [ee]="ee"></app-detail-web-trans>
-<app-detail-auth-trans [ec21]="ec21" [collins]="collins"></app-detail-auth-trans>
-<app-detail-transform [phrs]="phrs" [syno]="syno" [relWord]="relWord"></app-detail-transform>
-<app-detail-examples [blngSentsPart]="blngSentsPart" [authSentsPart]="authSentsPart" [mediaSentsPart]="mediaSentsPart"></app-detail-examples>
+<ngx-loading [show]="loading"></ngx-loading>
+<div class="main-content">
+  <app-detail-phrs-list-tab [input]="input" [simple]="simple" [ec]="ec"></app-detail-phrs-list-tab>
+  <app-detail-web-trans [webTrans]="webTrans" [special]="special" [ee]="ee"></app-detail-web-trans>
+  <app-detail-auth-trans [ec21]="ec21" [collins]="collins"></app-detail-auth-trans>
+  <app-detail-transform [phrs]="phrs" [syno]="syno" [relWord]="relWord"></app-detail-transform>
+  <app-detail-examples [blngSentsPart]="blngSentsPart" [authSentsPart]="authSentsPart" [mediaSentsPart]="mediaSentsPart"></app-detail-examples>
+</div>

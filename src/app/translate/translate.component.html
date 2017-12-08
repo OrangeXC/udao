@@ -1,30 +1,32 @@
-<ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
-<p class="lead text-center">目前只支持（英译汉）,Enter 搜索</p>
-<textarea class="form-control" #box (keyup.enter)="onEnter(box.value)" rows="10"></textarea>
-<div class="translated" *ngIf="query">
-  <h3>{{ query }}</h3>
-  <div *ngIf="translation.length">
-    <h5>翻译</h5>
-    <ul>
-      <li *ngFor="let item of translation">{{ item }}</li>
-    </ul>
+<ngx-loading [show]="loading"></ngx-loading>
+<div class="main-content">
+  <p class="lead text-center">目前只支持（英译汉）,Enter 搜索</p>
+  <textarea class="form-control" #box (keyup.enter)="onEnter(box.value)" rows="10"></textarea>
+  <div class="translated" *ngIf="query">
+    <h3>{{ query }}</h3>
+    <div *ngIf="translation.length">
+      <h5>翻译</h5>
+      <mat-list>
+        <mat-list-item *ngFor="let item of translation">{{ item }}</mat-list-item>
+      </mat-list>
+    </div>
+    <div *ngIf="explains.length">
+      <h5>解释</h5>
+      <mat-list>
+        <mat-list-item *ngFor="let item of explains">{{ item }}</mat-list-item>
+      </mat-list>
+    </div>
+    <div *ngIf="web.length">
+      <h5>网络</h5>
+      <mat-list>
+        <mat-list-item *ngFor="let item of web">
+          <h3 matLine>{{ item.key }}</h3>
+          <p matLine>{{ item.value.join(', ') }}</p>
+        </mat-list-item>
+      </mat-list>
+    </div>
+    <p>
+      <a [routerLink]="['/detail', query]">更多 >></a>
+    </p>
   </div>
-  <div *ngIf="explains.length">
-    <h5>解释</h5>
-    <ul>
-      <li *ngFor="let item of explains">{{ item }}</li>
-    </ul>
-  </div>
-  <div *ngIf="web.length">
-    <h5>网络</h5>
-    <dl>
-      <ng-template ngFor let-item [ngForOf]="web" let-i="index">
-        <dt>{{ item.key }}</dt>
-        <dd>{{ item.value.join(', ') }}</dd>
-      </ng-template>
-    </dl>
-  </div>
-  <p>
-    <a [routerLink]="['/detail', query]">更多 >></a>
-  </p>
 </div>

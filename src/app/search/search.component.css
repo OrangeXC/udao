@@ -1,11 +1,12 @@
+.full-width {
+  width: 100%;
+}
+
 .result-wrap {
   margin-top: 10px;
 }
 
-.list-group-item {
+.mat-list-item:hover {
   cursor: pointer;
-}
-
-.list-group-item:hover {
-  background-color: #efefef;
+  background: rgba(0, 0, 0, .04);
 }
