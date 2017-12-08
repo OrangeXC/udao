@@ -16,7 +16,7 @@
                  [opened]="mobileQuery.matches ? false : true">
       <mat-nav-list>
         <ul class="side-nav">
-          <li *ngFor="let item of navList">
+          <li *ngFor="let item of navList" (click)="mobileQuery.matches && snav.toggle()">
             <a mat-list-item routerLink="{{ item.link }}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><mat-icon>{{ item.icon }}</mat-icon> {{ item.name }}</a>
           </li>
         </ul>
