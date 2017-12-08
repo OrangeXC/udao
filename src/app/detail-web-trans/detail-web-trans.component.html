@@ -4,7 +4,7 @@
     <mat-list *ngIf="webTrans.length">
       <mat-list-item *ngFor="let item of webTrans[0].trans; index as i">
         <h3 matLine>{{ item.value }}</h3>
-        <p matLine>
+        <p matLine *ngIf="item.summary">
           <span [innerHTML]="item.summary.line[0]"></span>
         </p>
       </mat-list-item>

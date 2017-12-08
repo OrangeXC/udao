@@ -1,7 +1,9 @@
 <ngx-loading [show]="loading"></ngx-loading>
 <div class="main-content">
   <p class="lead text-center">目前只支持（英译汉）,Enter 搜索</p>
-  <textarea class="form-control" #box (keyup.enter)="onEnter(box.value)" rows="10"></textarea>
+  <mat-form-field class="full-width">
+    <textarea matInput #box (keyup.enter)="onEnter(box.value)"></textarea>
+  </mat-form-field>
   <div class="translated" *ngIf="query">
     <h3>{{ query }}</h3>
     <div *ngIf="translation.length">
