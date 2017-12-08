@@ -19,40 +19,18 @@ import { DetailTransformComponent } from './detail-transform/detail-transform.co
 import { DetailExamplesComponent } from './detail-examples/detail-examples.component'
 
 import {
-  MatAutocompleteModule,
   MatButtonModule,
-  MatButtonToggleModule,
-  MatCardModule,
-  MatCheckboxModule,
-  MatChipsModule,
-  MatDatepickerModule,
-  MatDialogModule,
-  MatExpansionModule,
-  MatGridListModule,
   MatIconModule,
   MatInputModule,
   MatListModule,
   MatMenuModule,
-  MatNativeDateModule,
-  MatPaginatorModule,
-  MatProgressBarModule,
-  MatProgressSpinnerModule,
-  MatRadioModule,
-  MatRippleModule,
-  MatSelectModule,
   MatSidenavModule,
-  MatSliderModule,
-  MatSlideToggleModule,
   MatSnackBarModule,
-  MatSortModule,
-  MatTableModule,
   MatTabsModule,
-  MatToolbarModule,
-  MatTooltipModule,
-  MatStepperModule,
-} from '@angular/material';
+  MatToolbarModule
+} from '@angular/material'
 
-import { CdkTableModule } from '@angular/cdk/table';
+import { CdkTableModule } from '@angular/cdk/table'
 
 const routes: Routes = [
   {
@@ -86,37 +64,15 @@ export class ExampleInterceptor implements HttpInterceptor {
 @NgModule({
   exports: [
     CdkTableModule,
-    MatAutocompleteModule,
     MatButtonModule,
-    MatButtonToggleModule,
-    MatCardModule,
-    MatCheckboxModule,
-    MatChipsModule,
-    MatStepperModule,
-    MatDatepickerModule,
-    MatDialogModule,
-    MatExpansionModule,
-    MatGridListModule,
     MatIconModule,
     MatInputModule,
     MatListModule,
     MatMenuModule,
-    MatNativeDateModule,
-    MatPaginatorModule,
-    MatProgressBarModule,
-    MatProgressSpinnerModule,
-    MatRadioModule,
-    MatRippleModule,
-    MatSelectModule,
     MatSidenavModule,
-    MatSliderModule,
-    MatSlideToggleModule,
     MatSnackBarModule,
-    MatSortModule,
-    MatTableModule,
     MatTabsModule,
-    MatToolbarModule,
-    MatTooltipModule,
+    MatToolbarModule
   ]
 })
 export class MaterialModule {}
