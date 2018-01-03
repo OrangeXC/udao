@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core'
 import { HttpClient } from '@angular/common/http'
 import { Router,  ActivatedRoute, NavigationEnd } from '@angular/router'
+import { TransferState, makeStateKey } from '@angular/platform-browser'
+
+const DETAIL_KEY = makeStateKey('detail')
 
 @Component({
   selector: 'app-detail',
@@ -9,6 +12,8 @@ import { Router,  ActivatedRoute, NavigationEnd } from '@angular/router'
 })
 
 export class DetailComponent implements OnInit {
+  details: any
+
   public input = ''
 
   // 单词与音标
@@ -63,69 +68,80 @@ export class DetailComponent implements OnInit {
 
   constructor(
     private http: HttpClient,
+    private state: TransferState,
     private route: ActivatedRoute,
     private router: Router
   ) {}
 
+  transData (res) {
+    this.input = res['input']
+
+    this.simple = res['simple'] ? res['simple'] : {
+      query: '',
+      word: [{}]
+    }
+
+    this.ec = res['ec'] && res['ec']['word'] && res['ec']['word'][0] && Array.isArray(res['ec']['word'][0]['trs'])
+      ? res['ec']['word'][0]['trs'].map(item => item['tr'][0]['l']['i'][0])
+      : []
+
+    this.webTrans = res['web_trans'] && res['web_trans']['web-translation']
+      ? res['web_trans']['web-translation']
+      : []
+
+    this.special = res['special'] ? res['special'] : {}
+
+    this.ee = res['ee'] ? res['ee'] : {}
+
+    this.ec21 = res['ec21'] && res['ec21']['word']
+      ? res['ec21']['word']
+      : []
+
+    this.collins = res['collins'] && res['collins']['collins_entries'] && res['collins']['collins_entries'][0]
+      ? res['collins']['collins_entries'][0]
+      : {}
+
+    this.phrs = res['phrs'] && res['phrs']['phrs']
+      ? res['phrs']['phrs']
+      : []
+
+    this.syno = res['syno'] && res['syno']['synos']
+      ? res['syno']['synos']
+      : []
+
+    this.relWord = res['rel_word'] ? res['rel_word'] : {}
+
+    this.blngSentsPart = res['blng_sents_part'] && res['blng_sents_part']['sentence-pair']
+      ? res['blng_sents_part']['sentence-pair']
+      : []
+
+    this.authSentsPart = res['auth_sents_part'] && res['auth_sents_part']['sent']
+      ? res['auth_sents_part']['sent']
+      : []
+
+    this.mediaSentsPart = res['media_sents_part'] && res['media_sents_part']['sent']
+      ? res['media_sents_part']['sent']
+      : []
+  }
+
   ngOnInit () {
-    this.route.params.subscribe((params) => {
-      this.loading = true
+    this.details = this.state.get(DETAIL_KEY, null as any)
 
-      const apiURL = `https://dict.youdao.com/jsonapi?q=${params['word']}`
+    if (!this.details) {
+      this.route.params.subscribe((params) => {
+        this.loading = true
 
-      this.http.get(`/?url=${encodeURIComponent(apiURL)}`)
-      .subscribe(res => {
-        this.input = res['input']
+        const apiURL = `https://dict.youdao.com/jsonapi?q=${params['word']}`
 
-        this.simple = res['simple'] ? res['simple'] : {
-          query: '',
-          word: [{}]
-        }
-
-        this.ec = res['ec'] && res['ec']['word'] && res['ec']['word'][0] && Array.isArray(res['ec']['word'][0]['trs'])
-          ? res['ec']['word'][0]['trs'].map(item => item['tr'][0]['l']['i'][0])
-          : []
-
-        this.webTrans = res['web_trans'] && res['web_trans']['web-translation']
-          ? res['web_trans']['web-translation']
-          : []
-
-        this.special = res['special'] ? res['special'] : {}
-
-        this.ee = res['ee'] ? res['ee'] : {}
-
-        this.ec21 = res['ec21'] && res['ec21']['word']
-          ? res['ec21']['word']
-          : []
-
-        this.collins = res['collins'] && res['collins']['collins_entries'] && res['collins']['collins_entries'][0]
-          ? res['collins']['collins_entries'][0]
-          : {}
-
-        this.phrs = res['phrs'] && res['phrs']['phrs']
-          ? res['phrs']['phrs']
-          : []
-
-        this.syno = res['syno'] && res['syno']['synos']
-          ? res['syno']['synos']
-          : []
-
-        this.relWord = res['rel_word'] ? res['rel_word'] : {}
-
-        this.blngSentsPart = res['blng_sents_part'] && res['blng_sents_part']['sentence-pair']
-          ? res['blng_sents_part']['sentence-pair']
-          : []
-
-        this.authSentsPart = res['auth_sents_part'] && res['auth_sents_part']['sent']
-          ? res['auth_sents_part']['sent']
-          : []
-
-        this.mediaSentsPart = res['media_sents_part'] && res['media_sents_part']['sent']
-          ? res['media_sents_part']['sent']
-          : []
-
-        this.loading = false
+        this.http.get(`/?url=${encodeURIComponent(apiURL)}`)
+        .subscribe(res => {
+          this.transData(res)
+          this.state.set(DETAIL_KEY, res as any)
+          this.loading = false
+        })
       })
-    })
+    } else {
+      this.transData(this.details)
+    }
   }
 }

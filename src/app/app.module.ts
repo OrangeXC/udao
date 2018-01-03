@@ -1,4 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser'
+import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core'
 import { Injectable } from '@angular/core'
@@ -91,7 +91,8 @@ export class MaterialModule {}
     DetailExamplesComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'udao' }),
+    BrowserTransferStateModule,
     BrowserAnimationsModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
