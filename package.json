@@ -10,7 +10,7 @@
     "build:client": "ng build -prod --build-optimizer --app 0",
     "build:aot": "ng build --aot --app 1",
     "build:server": "webpack -p",
-    "heroku-postbuild": "npm run build",
+    "heroku-postbuild": "npm run build:client && npm run build:aot && npm run build:server",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
