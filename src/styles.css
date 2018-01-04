@@ -27,7 +27,3 @@ body {
 .text-success {
   color: #28a745;
 }
-
-.mat-drawer {
-  transition: all 0.5s linear;
-}
