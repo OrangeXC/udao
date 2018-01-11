@@ -141,6 +141,8 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnDestroy () {
-    this.state.set(DETAIL_KEY, null as any)
+    if (typeof window === 'object') {
+      this.state.set(DETAIL_KEY, null as any)
+    }
   }
 }
