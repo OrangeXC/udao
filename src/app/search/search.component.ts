@@ -13,7 +13,6 @@ export class SearchComponent {
   public query = ''
   public entries = []
   public language = ''
-  public loading = false
 
   constructor(
     private http: HttpClient,
@@ -26,8 +25,6 @@ export class SearchComponent {
     this.language = ''
 
     if (!value) return
-
-    this.loading = true
 
     // before 2017-12
     // after can use https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md
@@ -46,9 +43,7 @@ export class SearchComponent {
         if (data['language']) {
           this.language = data['language']
         }
-
-        this.loading = false
-      });
+      })
   }
 
   gotoDetail ({ entry }) {

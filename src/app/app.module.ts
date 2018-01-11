@@ -3,8 +3,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core'
 import { Injectable } from '@angular/core'
 import { HttpClientModule, HttpRequest, HttpInterceptor, HttpHandler, HttpEvent, HTTP_INTERCEPTORS } from '@angular/common/http'
+import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client'
 import { Routes, RouterModule }   from '@angular/router'
-import { LoadingModule } from 'ngx-loading'
+import { ServiceWorkerModule } from '@angular/service-worker'
+import { environment } from '../environments/environment'
 import { Observable } from 'rxjs/Observable'
 
 import { AppComponent } from './app.component'
@@ -95,9 +97,10 @@ export class MaterialModule {}
     BrowserTransferStateModule,
     BrowserAnimationsModule,
     HttpClientModule,
+    LoadingBarHttpClientModule,
     RouterModule.forRoot(routes),
     MaterialModule,
-    LoadingModule
+    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
   ],
   providers: [
     AppComponent,

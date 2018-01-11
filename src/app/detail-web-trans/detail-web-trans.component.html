@@ -1,4 +1,4 @@
-<mat-tab-group>
+<mat-tab-group [dynamicHeight]="true">
   <mat-tab label="网络释义" *ngIf="webTrans && webTrans.length">
     <h5>释义</h5>
     <mat-list *ngIf="webTrans.length">
@@ -23,7 +23,7 @@
     </div>
   </mat-tab>
   <mat-tab label="专业释义" *ngIf="special && special.entries">
-    <mat-tab-group type="pills">
+    <mat-tab-group [dynamicHeight]="true">
       <ng-template ngFor let-item [ngForOf]="special.entries" let-i="index">
         <mat-tab label="{{ item.entry.major }}">
           <ng-template ngFor let-trItem [ngForOf]="item.entry.trs">

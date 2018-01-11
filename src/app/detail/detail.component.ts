@@ -64,8 +64,6 @@ export class DetailComponent implements OnInit {
   // 百科
   public wiki = {}
 
-  public loading = false
-
   constructor(
     private http: HttpClient,
     private state: TransferState,
@@ -129,19 +127,20 @@ export class DetailComponent implements OnInit {
 
     if (!this.details) {
       this.route.params.subscribe((params) => {
-        this.loading = true
-
         const apiURL = `https://dict.youdao.com/jsonapi?q=${params['word']}`
 
         this.http.get(`/?url=${encodeURIComponent(apiURL)}`)
         .subscribe(res => {
           this.transData(res)
           this.state.set(DETAIL_KEY, res as any)
-          this.loading = false
         })
       })
     } else {
       this.transData(this.details)
     }
+  }
+
+  ngOnDestroy () {
+    this.state.set(DETAIL_KEY, null as any)
   }
 }
