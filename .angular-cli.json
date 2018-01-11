@@ -28,11 +28,12 @@
         "dev": "environments/environment.ts",
         "prod": "environments/environment.prod.ts"
       }
-    }, {
-      "platform": "server",
+    },
+    {
       "root": "src",
       "outDir": "dist/server",
       "assets": [],
+      "platform": "server",
       "index": "index.html",
       "main": "main.server.ts",
       "test": "test.ts",

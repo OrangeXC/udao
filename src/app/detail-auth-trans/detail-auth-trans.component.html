@@ -1,8 +1,8 @@
-<mat-tab-group>
+<mat-tab-group [dynamicHeight]="true">
   <mat-tab label="21世纪大英汉词典" *ngIf="ec21 && ec21.length">
     <p>
       <b>{{ ec21[0]['return-phrase'].l.i[0] }}</b>
-      <span class="text-muted">[{{ ec21[0].phone }}]</span>
+      <span class="text-muted" *ngIf="ec21[0].phone">[{{ ec21[0].phone }}]</span>
     </p>
     <ng-template ngFor let-trs [ngForOf]="ec21[0].trs">
       <p>{{ trs.pos }}</p>
@@ -41,6 +41,7 @@
       </div>
     </div>
     <button mat-raised-button
+      *ngIf="ec21.length > 1"
       color="primary"
       class="btn btn-link"
       (click)="isCollapsed = !isCollapsed"
@@ -63,12 +64,14 @@
     </p>
     <ol>
       <li *ngFor="let entry of collins.entries.entry">
-        <p>{{ entry['tran_entry'][0]['pos_entry'].pos }} <span class="text-success" [innerHTML]="entry['tran_entry'][0].tran"></span></p>
-        <ng-template [ngIf]="entry['tran_entry'][0]['exam_sents'] && entry['tran_entry'][0]['exam_sents']['sent']">
-          <ng-template ngFor let-exam [ngForOf]="entry['tran_entry'][0]['exam_sents']['sent']">
-            <p>例：</p>
-            <p>{{ exam.eng_sent }}</p>
-            <p>{{ exam.chn_sent }}</p>
+        <ng-template [ngIf]="entry['tran_entry'][0]['pos_entry'] && entry['tran_entry'][0]['pos_entry'].pos">
+          <p>{{ entry['tran_entry'][0]['pos_entry'].pos }} <span class="text-success" [innerHTML]="entry['tran_entry'][0].tran"></span></p>
+          <ng-template [ngIf]="entry['tran_entry'][0]['exam_sents'] && entry['tran_entry'][0]['exam_sents']['sent']">
+            <ng-template ngFor let-exam [ngForOf]="entry['tran_entry'][0]['exam_sents']['sent']">
+              <p>例：</p>
+              <p>{{ exam.eng_sent }}</p>
+              <p>{{ exam.chn_sent }}</p>
+            </ng-template>
           </ng-template>
         </ng-template>
       </li>

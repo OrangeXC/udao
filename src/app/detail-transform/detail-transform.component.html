@@ -1,4 +1,4 @@
-<mat-tab-group>
+<mat-tab-group [dynamicHeight]="true">
   <mat-tab label="词组短语" *ngIf="phrs && phrs.length">
     <p *ngFor="let phr of phrs">
       <a [routerLink]="['/detail', phr.phr.headword.l.i]">{{ phr.phr.headword.l.i }}</a>

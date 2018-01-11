@@ -1,4 +1,4 @@
-<mat-tab-group>
+<mat-tab-group [dynamicHeight]="true">
   <mat-tab label="双语例句" *ngIf="blngSentsPart && blngSentsPart.length">
     <ol>
       <li *ngFor="let item of blngSentsPart">
