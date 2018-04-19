@@ -19,7 +19,9 @@ export class TranslateComponent {
   ) {}
 
   onEnter(value: string) {
-    if (!value) return
+    if (!value) {
+      return
+    }
 
     this.query = ''
     this.explains = []
@@ -28,7 +30,9 @@ export class TranslateComponent {
 
     // before 2017-12
     // after can use https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md
-    let apiURL = encodeURIComponent(`https://fanyi.youdao.com/openapi.do?keyfrom=f2ec-org&key=1787962561&type=data&doctype=json&version=1.1&q=${value}`)
+    const apiURL = encodeURIComponent(
+      `https://fanyi.youdao.com/openapi.do?keyfrom=f2ec-org&key=1787962561&type=data&doctype=json&version=1.1&q=${value}`
+    )
 
     this.http.get(`/?url=${apiURL}`)
       .subscribe(data => {

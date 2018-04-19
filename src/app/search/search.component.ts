@@ -24,11 +24,13 @@ export class SearchComponent {
     this.entries = []
     this.language = ''
 
-    if (!value) return
+    if (!value) {
+      return
+    }
 
     // before 2017-12
     // after can use https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md
-    let apiURL = encodeURIComponent(`http://dict.youdao.com/suggest?q=${value}&le=eng&num=20&doctype=json`)
+    const apiURL = encodeURIComponent(`http://dict.youdao.com/suggest?q=${value}&le=eng&num=20&doctype=json`)
 
     this.http.get(`/?url=${apiURL}`)
       .subscribe(res => {

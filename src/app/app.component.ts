@@ -34,7 +34,7 @@ export class AppComponent {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-  ngOnDestroy(): void {
+  OnDestroy(): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 }
