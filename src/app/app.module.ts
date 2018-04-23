@@ -1,7 +1,6 @@
 import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-browser'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { NgModule } from '@angular/core'
-import { Injectable } from '@angular/core'
+import { NgModule, Injectable } from '@angular/core'
 import { HttpClientModule, HttpRequest, HttpInterceptor, HttpHandler, HttpEvent, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client'
 import { Routes, RouterModule } from '@angular/router'
