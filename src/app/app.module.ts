@@ -16,6 +16,8 @@ import {
   HttpEvent,
   HTTP_INTERCEPTORS
 } from '@angular/common/http';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
@@ -56,7 +58,8 @@ export class Interceptor implements HttpInterceptor {
     AppRoutingModule,
     HttpClientModule,
     MaterialModule,
-    LoadingBarHttpClientModule
+    LoadingBarHttpClientModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   declarations: [
     AppComponent,
