@@ -26,6 +26,7 @@
     "@angular/platform-browser": "^6.0.0",
     "@angular/platform-browser-dynamic": "^6.0.0",
     "@angular/platform-server": "^6.0.0",
+    "@angular/pwa": "^0.6.0",
     "@angular/router": "^6.0.0",
     "@angular/service-worker": "^6.0.0",
     "@nguniversal/express-engine": "^6.0.0",
