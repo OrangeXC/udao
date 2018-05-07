@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail-web-trans',
@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core'
 })
 
 export class DetailWebTransComponent {
-  @Input() webTrans
-  @Input() special
-  @Input() ee
+  @Input() webTrans;
+  @Input() special;
+  @Input() ee;
 }

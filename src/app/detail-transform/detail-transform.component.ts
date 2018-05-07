@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail-transform',
@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core'
   styleUrls: ['./detail-transform.component.css']
 })
 export class DetailTransformComponent {
-  @Input () phrs
-  @Input () syno
-  @Input () relWord
+  @Input () phrs;
+  @Input () syno;
+  @Input () relWord;
 }

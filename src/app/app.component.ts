@@ -24,7 +24,7 @@ export class AppComponent {
       link: '/translate',
       icon: 'g_translate'
     }
-  ]
+  ];
 
   private _mobileQueryListener: () => void;
 

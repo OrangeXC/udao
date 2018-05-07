@@ -8,11 +8,11 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 
 export class TranslateComponent {
-  public value = ''
-  public query = ''
-  public explains = []
-  public translation = []
-  public web = []
+  public value = '';
+  public query = '';
+  public explains = [];
+  public translation = [];
+  public web = [];
 
   constructor(
     private http: HttpClient
@@ -20,35 +20,35 @@ export class TranslateComponent {
 
   onEnter(value: string) {
     if (!value) {
-      return
+      return;
     }
 
-    this.query = ''
-    this.explains = []
-    this.translation = []
-    this.web = []
+    this.query = '';
+    this.explains = [];
+    this.translation = [];
+    this.web = [];
 
     // before 2017-12
     // after can use https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md
     const apiURL = encodeURIComponent(
       `https://fanyi.youdao.com/openapi.do?keyfrom=f2ec-org&key=1787962561&type=data&doctype=json&version=1.1&q=${value}`
-    )
+    );
 
     this.http.get(`/?url=${apiURL}`)
       .subscribe(data => {
-        this.query = data['query']
+        this.query = data['query'];
 
         if (data['basic'] && data['basic']['explains']) {
-          this.explains = data['basic']['explains']
+          this.explains = data['basic']['explains'];
         }
 
         if (data['translation']) {
-          this.translation = data['translation']
+          this.translation = data['translation'];
         }
 
         if (data['web']) {
-          this.web = data['web']
+          this.web = data['web'];
         }
-      })
+      });
   }
 }
