@@ -4,7 +4,6 @@ import { NgModule, Injectable } from '@angular/core'
 import { HttpClientModule, HttpRequest, HttpInterceptor, HttpHandler, HttpEvent, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client'
 import { Routes, RouterModule } from '@angular/router'
-import { ServiceWorkerModule } from '@angular/service-worker'
 import { environment } from '../environments/environment'
 import { Observable } from 'rxjs/Observable'
 
@@ -98,8 +97,7 @@ export class MaterialModule {}
     HttpClientModule,
     LoadingBarHttpClientModule,
     RouterModule.forRoot(routes),
-    MaterialModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', {enabled: environment.production})
+    MaterialModule
   ],
   providers: [
     AppComponent,
