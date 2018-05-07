@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail-phrs-list-tab',
@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core'
 })
 
 export class DetailPhrsListTabComponent {
-  @Input() input
-  @Input() simple
-  @Input() ec
+  @Input() input;
+  @Input() simple;
+  @Input() ec;
 }

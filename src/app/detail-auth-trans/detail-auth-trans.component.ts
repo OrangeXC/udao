@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail-auth-trans',
@@ -7,8 +7,8 @@ import { Component, Input } from '@angular/core'
 })
 
 export class DetailAuthTransComponent {
-  public isCollapsed = true
+  public isCollapsed = true;
 
-  @Input() ec21
-  @Input() collins
+  @Input() ec21;
+  @Input() collins;
 }

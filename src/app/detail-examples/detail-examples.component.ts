@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core'
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail-examples',
@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core'
 })
 
 export class DetailExamplesComponent {
-  @Input () blngSentsPart
-  @Input () authSentsPart
-  @Input () mediaSentsPart
+  @Input () blngSentsPart;
+  @Input () authSentsPart;
+  @Input () mediaSentsPart;
 }
