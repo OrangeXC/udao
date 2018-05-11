@@ -2,21 +2,21 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.6.0.tgz#622a933337c946ef85d646545cc4244272ccb402"
+"@angular-devkit/architect@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.6.1.tgz#bcff4143730959b131bdbf0273d86904a988ea88"
   dependencies:
-    "@angular-devkit/core" "0.6.0"
+    "@angular-devkit/core" "0.6.1"
     rxjs "^6.0.0"
 
-"@angular-devkit/build-angular@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.6.0.tgz#f5757f80fc402458e6b5eae1578bbc2a1af44ebe"
+"@angular-devkit/build-angular@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-angular/-/build-angular-0.6.1.tgz#e59df34271d74436e62086dcf1523e2d22ac7f1b"
   dependencies:
-    "@angular-devkit/architect" "0.6.0"
-    "@angular-devkit/build-optimizer" "0.6.0"
-    "@angular-devkit/core" "0.6.0"
-    "@ngtools/webpack" "6.0.0"
+    "@angular-devkit/architect" "0.6.1"
+    "@angular-devkit/build-optimizer" "0.6.1"
+    "@angular-devkit/core" "0.6.1"
+    "@ngtools/webpack" "6.0.1"
     ajv "~6.4.0"
     autoprefixer "^8.1.0"
     cache-loader "^1.2.2"
@@ -65,29 +65,29 @@
     webpack-sources "^1.1.0"
     webpack-subresource-integrity "^1.1.0-rc.4"
 
-"@angular-devkit/build-optimizer@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.6.0.tgz#150a76155b473dea17327a176d18245a2da1c13e"
+"@angular-devkit/build-optimizer@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/build-optimizer/-/build-optimizer-0.6.1.tgz#517aa0c92911eb6a8d82fcbbefa045e1f897abda"
   dependencies:
     loader-utils "^1.1.0"
     source-map "^0.5.6"
     typescript "~2.7.2"
     webpack-sources "^1.1.0"
 
-"@angular-devkit/core@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.6.0.tgz#d1a7275ff0f93de5cf007c4a549d1ebd00776fd0"
+"@angular-devkit/core@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-0.6.1.tgz#2582871707a19fe3a4b83d9afdffd5422d1debc7"
   dependencies:
     ajv "~6.4.0"
     chokidar "^2.0.3"
     rxjs "^6.0.0"
     source-map "^0.5.6"
 
-"@angular-devkit/schematics@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.6.0.tgz#0117dc7d5905b053df4f2918e2e073efd1091f5c"
+"@angular-devkit/schematics@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit/schematics/-/schematics-0.6.1.tgz#8e94fbd45e24596f1f0a086a70dde88dbc6cf96e"
   dependencies:
-    "@angular-devkit/core" "0.6.0"
+    "@angular-devkit/core" "0.6.1"
     rxjs "^6.0.0"
 
 "@angular/animations@6.0.0":
@@ -102,16 +102,16 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cli@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-6.0.0.tgz#346b356775ddf8cdb8a9a5095b0663878eca3486"
+"@angular/cli@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-6.0.1.tgz#52c21451716be51716a413c5367b3f3d003f8447"
   dependencies:
-    "@angular-devkit/architect" "0.6.0"
-    "@angular-devkit/core" "0.6.0"
-    "@angular-devkit/schematics" "0.6.0"
-    "@schematics/angular" "0.6.0"
-    "@schematics/update" "0.6.0"
-    opn "~5.1.0"
+    "@angular-devkit/architect" "0.6.1"
+    "@angular-devkit/core" "0.6.1"
+    "@angular-devkit/schematics" "0.6.1"
+    "@schematics/angular" "0.6.1"
+    "@schematics/update" "0.6.1"
+    opn "~5.3.0"
     resolve "^1.1.7"
     rxjs "^6.0.0"
     semver "^5.1.0"
@@ -188,13 +188,13 @@
     tslib "^1.9.0"
     xhr2 "^0.1.4"
 
-"@angular/pwa@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.6.0.tgz#0ed5ad5a6eb6117ec424a153258c371d764397b9"
+"@angular/pwa@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@angular/pwa/-/pwa-0.6.1.tgz#7e9bf74ed9bb8f7b5656bad7337dcc9cb42df02a"
   dependencies:
-    "@angular-devkit/core" "0.6.0"
-    "@angular-devkit/schematics" "0.6.0"
-    "@schematics/angular" "0.6.0"
+    "@angular-devkit/core" "0.6.1"
+    "@angular-devkit/schematics" "0.6.1"
+    "@schematics/angular" "0.6.1"
     typescript "~2.6.2"
 
 "@angular/router@6.0.0":
@@ -216,11 +216,11 @@
     call-me-maybe "^1.0.1"
     glob-to-regexp "^0.3.0"
 
-"@ngtools/webpack@6.0.0":
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.0.0.tgz#e160cccd85823e9b01ee7bc5156a02510a323a34"
+"@ngtools/webpack@6.0.1":
+  version "6.0.1"
+  resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-6.0.1.tgz#1a3eee13f7319a5c2b758ae461c386e1b6c80645"
   dependencies:
-    "@angular-devkit/core" "0.6.0"
+    "@angular-devkit/core" "0.6.1"
     tree-kill "^1.0.0"
     webpack-sources "^1.1.0"
 
@@ -245,20 +245,20 @@
     "@ngx-loading-bar/core" "2.0.0"
     tslib "^1.7.1"
 
-"@schematics/angular@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.6.0.tgz#d7589c50f80ef089f7fba526ed9becefb187b6a2"
+"@schematics/angular@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@schematics/angular/-/angular-0.6.1.tgz#912495d248b95fcd20a04609e48cf2a4516b2071"
   dependencies:
-    "@angular-devkit/core" "0.6.0"
-    "@angular-devkit/schematics" "0.6.0"
+    "@angular-devkit/core" "0.6.1"
+    "@angular-devkit/schematics" "0.6.1"
     typescript ">=2.6.2 <2.8"
 
-"@schematics/update@0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.6.0.tgz#1a5f75a5a02de85cc4b4bd4fa68dd53ddc95ba30"
+"@schematics/update@0.6.1":
+  version "0.6.1"
+  resolved "https://registry.yarnpkg.com/@schematics/update/-/update-0.6.1.tgz#047ae51df9d80827d56e2f88b662b7c109cb0988"
   dependencies:
-    "@angular-devkit/core" "0.6.0"
-    "@angular-devkit/schematics" "0.6.0"
+    "@angular-devkit/core" "0.6.1"
+    "@angular-devkit/schematics" "0.6.1"
     npm-registry-client "^8.5.1"
     rxjs "^6.0.0"
     semver "^5.3.0"
@@ -282,9 +282,9 @@
   dependencies:
     "@types/jasmine" "*"
 
-"@types/node@10.0.6":
-  version "10.0.6"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.0.6.tgz#c0bce8e539bf34c1b850c13ff46bead2fecc2e58"
+"@types/node@10.0.8":
+  version "10.0.8"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-10.0.8.tgz#37b4d91d4e958e4c2ba0be2b86e7ed4ff19b0858"
 
 "@types/node@^6.0.46":
   version "6.0.96"
@@ -463,6 +463,12 @@ agent-base@2:
   dependencies:
     extend "~3.0.0"
     semver "~5.0.1"
+
+agent-base@^4.1.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/agent-base/-/agent-base-4.2.0.tgz#9838b5c3392b962bad031e6a4c5e1024abec45ce"
+  dependencies:
+    es6-promisify "^5.0.0"
 
 ajv-keywords@^3.1.0:
   version "3.1.0"
@@ -2868,9 +2874,19 @@ es-to-primitive@^1.1.1:
     is-date-object "^1.0.1"
     is-symbol "^1.0.1"
 
+es6-promise@^4.0.3:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-4.2.4.tgz#dc4221c2b16518760bd8c39a52d8f356fc00ed29"
+
 es6-promise@~3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/es6-promise/-/es6-promise-3.0.2.tgz#010d5858423a5f118979665f46486a95c6ee2bb6"
+
+es6-promisify@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/es6-promisify/-/es6-promisify-5.0.0.tgz#5109d62f3e56ea967c4b63505aef08291c8a5203"
+  dependencies:
+    es6-promise "^4.0.3"
 
 escape-html@~1.0.3:
   version "1.0.3"
@@ -4028,13 +4044,20 @@ https-browserify@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-browserify/-/https-browserify-1.0.0.tgz#ec06c10e0a34c0f2faf199f7fd7fc78fffd03c73"
 
-https-proxy-agent@1, https-proxy-agent@^1.0.0:
+https-proxy-agent@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-1.0.0.tgz#35f7da6c48ce4ddbfa264891ac593ee5ff8671e6"
   dependencies:
     agent-base "2"
     debug "2"
     extend "3"
+
+https-proxy-agent@^2.2.1:
+  version "2.2.1"
+  resolved "https://registry.yarnpkg.com/https-proxy-agent/-/https-proxy-agent-2.2.1.tgz#51552970fa04d723e04c56d04178c3f92592bbc0"
+  dependencies:
+    agent-base "^4.1.0"
+    debug "^3.1.0"
 
 iconv-lite@0.4.15:
   version "0.4.15"
@@ -4807,19 +4830,13 @@ karma-coverage-istanbul-reporter@1.4.2:
     istanbul-api "^1.1.14"
     minimatch "^3.0.4"
 
-karma-jasmine-html-reporter@1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.0.0.tgz#0515b9ea0440c038c2091b13802c8ea638cc847a"
-  dependencies:
-    karma-jasmine "^1.0.2"
+karma-jasmine-html-reporter@1.1.0:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.1.0.tgz#e6ce732fac43cb3907d927d5a6b3ed6ee7e95486"
 
 karma-jasmine@1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-1.1.2.tgz#394f2b25ffb4a644b9ada6f22d443e2fd08886c3"
-
-karma-jasmine@^1.0.2:
-  version "1.1.1"
-  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-1.1.1.tgz#6fe840e75a11600c9d91e84b33c458e1c46a3529"
 
 karma-source-map-support@^1.2.0:
   version "1.2.0"
@@ -5952,15 +5969,9 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-opn@^5.1.0:
+opn@^5.1.0, opn@~5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/opn/-/opn-5.3.0.tgz#64871565c863875f052cfdf53d3e3cb5adb53b1c"
-  dependencies:
-    is-wsl "^1.1.0"
-
-opn@~5.1.0:
-  version "5.1.0"
-  resolved "https://registry.yarnpkg.com/opn/-/opn-5.1.0.tgz#72ce2306a17dbea58ff1041853352b4a8fc77519"
   dependencies:
     is-wsl "^1.1.0"
 
@@ -6443,9 +6454,9 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-protractor@5.3.1:
-  version "5.3.1"
-  resolved "https://registry.yarnpkg.com/protractor/-/protractor-5.3.1.tgz#b8b8ac4ad2278bb7a461b99a34d79532095f14b8"
+protractor@5.3.2:
+  version "5.3.2"
+  resolved "https://registry.yarnpkg.com/protractor/-/protractor-5.3.2.tgz#b8278f3131d9d52fa1172ed0f7fec03085fbe0ce"
   dependencies:
     "@types/node" "^6.0.46"
     "@types/q" "^0.0.32"
@@ -6457,7 +6468,7 @@ protractor@5.3.1:
     jasminewd2 "^2.1.0"
     optimist "~0.6.0"
     q "1.4.1"
-    saucelabs "~1.3.0"
+    saucelabs "^1.5.0"
     selenium-webdriver "3.6.0"
     source-map-support "~0.4.0"
     webdriver-js-extender "^1.0.0"
@@ -7206,11 +7217,11 @@ sass-loader@^7.0.1:
     neo-async "^2.5.0"
     pify "^3.0.0"
 
-saucelabs@~1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/saucelabs/-/saucelabs-1.3.0.tgz#d240e8009df7fa87306ec4578a69ba3b5c424fee"
+saucelabs@^1.5.0:
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/saucelabs/-/saucelabs-1.5.0.tgz#9405a73c360d449b232839919a86c396d379fd9d"
   dependencies:
-    https-proxy-agent "^1.0.0"
+    https-proxy-agent "^2.2.1"
 
 sax@0.5.x:
   version "0.5.8"
