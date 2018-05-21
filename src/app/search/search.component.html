@@ -1,7 +1,7 @@
 <div class="main-content">
   <p class="lead text-center">英文单词模糊搜索</p>
   <mat-form-field class="full-width">
-    <input matInput placeholder="请输入模糊搜索关键字" #box (keyup.enter)="onKey(box.value)">
+    <input type="search" matInput placeholder="请输入模糊搜索关键字" #box (keyup.enter)="onKey(box)">
   </mat-form-field>
   <div class="result-wrap" *ngIf="query">
     <div *ngIf="entries.length">

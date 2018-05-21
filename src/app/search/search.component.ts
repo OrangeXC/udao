@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
+import { MatSnackBar } from '@angular/material';
 
 @Component({
   selector: 'app-search',
@@ -16,10 +17,14 @@ export class SearchComponent {
 
   constructor(
     private http: HttpClient,
-    private router: Router
+    private router: Router,
+    public snackBar: MatSnackBar
   ) {}
 
-  onKey (value: string) {
+  onKey (box) {
+    box.blur();
+    const value = box.value;
+
     this.query = '';
     this.entries = [];
     this.language = '';
@@ -38,8 +43,13 @@ export class SearchComponent {
 
         this.query = data['query'];
 
-        if (data['entries']) {
+        if (data['entries'] && data['entries'].length) {
           this.entries = data['entries'];
+        } else {
+          this.snackBar.open(`未查到关键词 ${value}`, '', {
+            verticalPosition: 'top',
+            duration: 3000
+          });
         }
 
         if (data['language']) {
