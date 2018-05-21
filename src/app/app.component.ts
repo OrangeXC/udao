@@ -1,5 +1,5 @@
+import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
-import { ChangeDetectorRef, Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +7,7 @@ import { ChangeDetectorRef, Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent {
+export class AppComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
 
   navList = [
@@ -34,7 +34,7 @@ export class AppComponent {
     this.mobileQuery.addListener(this._mobileQueryListener);
   }
 
-  OnDestroy(): void {
+  ngOnDestroy (): void {
     this.mobileQuery.removeListener(this._mobileQueryListener);
   }
 }

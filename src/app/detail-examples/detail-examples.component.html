@@ -12,8 +12,6 @@
     <ol>
       <li *ngFor="let item of mediaSentsPart">
         <p [innerHTML]="item.eng"></p>
-        <audio *ngIf="item['@mediatype'] === 'audio'" src="{{ item.snippets.snippet[0].streamUrl }}"></audio>
-        <video *ngIf="item['@mediatype'] === 'video'" src="{{ item.snippets.snippet[0].streamUrl.slice(6) }}" poster="{{ item.snippets.snippet[0].imageUrl }}"></video>
         <p class="text-muted">
           <a *ngIf="item.snippets.snippet[0].sourceUrl" href="{{ item.snippets.snippet[0].sourceUrl }}" target="_blank">
             <small class="text-muted">{{ item.snippets.snippet[0].source }} {{ item.snippets.snippet[0].name }}</small>

@@ -11,7 +11,7 @@ const DETAIL_KEY = makeStateKey('detail');
   styleUrls: ['./detail.component.css']
 })
 
-export class DetailComponent implements OnInit {
+export class DetailComponent implements OnInit, OnDestroy {
   details: any;
 
   public input = '';
@@ -140,7 +140,7 @@ export class DetailComponent implements OnInit {
     }
   }
 
-  OnDestroy () {
+  ngOnDestroy () {
     if (typeof window === 'object') {
       this.state.set(DETAIL_KEY, null as any);
     }
