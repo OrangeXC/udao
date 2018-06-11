@@ -6840,9 +6840,9 @@ trim-right@^1.0.1:
   dependencies:
     glob "^6.0.4"
 
-ts-loader@4.4.0:
-  version "4.4.0"
-  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-4.4.0.tgz#a9ecb11f8e4ee1b003325f40c519813fc4df541a"
+ts-loader@4.4.1:
+  version "4.4.1"
+  resolved "https://registry.yarnpkg.com/ts-loader/-/ts-loader-4.4.1.tgz#c93a46eea430ebce1f790dfe438caefb8670d365"
   dependencies:
     chalk "^2.3.0"
     enhanced-resolve "^4.0.0"
