@@ -17,13 +17,13 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "6.0.5",
-    "@angular/cdk": "6.2.1",
+    "@angular/cdk": "6.3.0",
     "@angular/common": "6.0.5",
     "@angular/compiler": "6.0.5",
     "@angular/core": "6.0.5",
     "@angular/forms": "6.0.5",
     "@angular/http": "6.0.5",
-    "@angular/material": "6.2.1",
+    "@angular/material": "6.3.0",
     "@angular/platform-browser": "6.0.5",
     "@angular/platform-browser-dynamic": "6.0.5",
     "@angular/platform-server": "6.0.5",
@@ -48,7 +48,7 @@
     "@angular/language-service": "6.0.5",
     "@types/jasmine": "2.8.8",
     "@types/jasminewd2": "2.0.3",
-    "@types/node": "10.3.3",
+    "@types/node": "10.3.4",
     "codelyzer": "4.3.0",
     "jasmine": "3.1.0",
     "jasmine-core": "3.1.0",
@@ -64,7 +64,7 @@
     "tslint": "5.10.0",
     "typescript": "2.7.2",
     "webpack": "4.12.0",
-    "webpack-cli": "3.0.6",
+    "webpack-cli": "3.0.8",
     "webpack-node-externals": "1.7.2"
   }
 }
