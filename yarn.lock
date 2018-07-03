@@ -116,9 +116,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@6.3.1":
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-6.3.1.tgz#88f65710b3f9fdc64c956a2862076eeb4e7a4d57"
+"@angular/cdk@6.3.2":
+  version "6.3.2"
+  resolved "http://npm.zhaopin.com/@angular%2fcdk/-/cdk-6.3.2.tgz#d1a9599275fd08f5a996c668985a39e4ce1c514b"
   dependencies:
     tslib "^1.7.1"
 
@@ -182,11 +182,13 @@
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/@angular/language-service/-/language-service-6.0.7.tgz#047dcd762be8a6c24e7309905e468ca82bcf91ec"
 
-"@angular/material@6.3.1":
-  version "6.3.1"
-  resolved "https://registry.yarnpkg.com/@angular/material/-/material-6.3.1.tgz#d1da2bc6d20a710a9affc36132e872206e67d698"
+"@angular/material@6.3.2":
+  version "6.3.2"
+  resolved "http://npm.zhaopin.com/@angular%2fmaterial/-/material-6.3.2.tgz#85430c7aefe8d04e770fd1e8cc20ead1726d2fcc"
   dependencies:
     tslib "^1.7.1"
+  optionalDependencies:
+    parse5 "^5.0.0"
 
 "@angular/platform-browser-dynamic@6.0.7":
   version "6.0.7"
@@ -3901,9 +3903,9 @@ karma-coverage-istanbul-reporter@2.0.1:
     istanbul-api "^1.3.1"
     minimatch "^3.0.4"
 
-karma-jasmine-html-reporter@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.1.0.tgz#e6ce732fac43cb3907d927d5a6b3ed6ee7e95486"
+karma-jasmine-html-reporter@1.2.0:
+  version "1.2.0"
+  resolved "http://npm.zhaopin.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.2.0.tgz#ddedfb40f0c0be2992d8b1367581e464d0472d15"
 
 karma-jasmine@1.1.2:
   version "1.1.2"
@@ -5074,6 +5076,10 @@ parse-json@^4.0.0:
 parse5@^4.0.0:
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/parse5/-/parse5-4.0.0.tgz#6d78656e3da8d78b4ec0b906f7c08ef1dfe3f608"
+
+parse5@^5.0.0:
+  version "5.0.0"
+  resolved "http://npm.zhaopin.com/parse5/-/parse5-5.0.0.tgz#4d02710d44f3c3846197a11e205d4ef17842b81a"
 
 parseqs@0.0.5:
   version "0.0.5"
@@ -7353,9 +7359,9 @@ webpack-subresource-integrity@^1.1.0-rc.4:
   dependencies:
     webpack-core "^0.6.8"
 
-webpack@4.13.0:
-  version "4.13.0"
-  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.13.0.tgz#9a7bb953109a4079e4a32843610d2dc0184dfbe6"
+webpack@4.14.0:
+  version "4.14.0"
+  resolved "http://npm.zhaopin.com/webpack/-/webpack-4.14.0.tgz#bbcc40dbf9a34129491b431574189d3802972243"
   dependencies:
     "@webassemblyjs/ast" "1.5.12"
     "@webassemblyjs/helper-module-context" "1.5.12"
