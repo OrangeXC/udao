@@ -48,7 +48,7 @@
     "@angular/language-service": "6.0.7",
     "@types/jasmine": "2.8.8",
     "@types/jasminewd2": "2.0.3",
-    "@types/node": "10.5.1",
+    "@types/node": "10.5.2",
     "codelyzer": "4.4.2",
     "jasmine": "3.1.0",
     "jasmine-core": "3.1.0",
@@ -63,7 +63,7 @@
     "ts-node": "7.0.0",
     "tslint": "5.10.0",
     "typescript": "2.7.2",
-    "webpack": "4.15.0",
+    "webpack": "4.15.1",
     "webpack-cli": "3.0.8",
     "webpack-node-externals": "1.7.2"
   }
