@@ -118,7 +118,7 @@
 
 "@angular/cdk@6.4.0":
   version "6.4.0"
-  resolved "http://npm.zhaopin.com/@angular%2fcdk/-/cdk-6.4.0.tgz#4339b72d96acdf1335b7b2ba1a94c07898df595e"
+  resolved "https://registry.yarnpkg.com/@angular%2fcdk/-/cdk-6.4.0.tgz#4339b72d96acdf1335b7b2ba1a94c07898df595e"
   dependencies:
     tslib "^1.7.1"
 
@@ -184,7 +184,7 @@
 
 "@angular/material@6.4.0":
   version "6.4.0"
-  resolved "http://npm.zhaopin.com/@angular%2fmaterial/-/material-6.4.0.tgz#7c68be455059aab5feae969b22307880237d2354"
+  resolved "https://registry.yarnpkg.com/@angular%2fmaterial/-/material-6.4.0.tgz#7c68be455059aab5feae969b22307880237d2354"
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -2281,7 +2281,7 @@ eslint-scope@^3.7.1:
 
 eslint-scope@^4.0.0:
   version "4.0.0"
-  resolved "http://npm.zhaopin.com/eslint-scope/-/eslint-scope-4.0.0.tgz#50bf3071e9338bcdc43331794a0cb533f0136172"
+  resolved "https://registry.yarnpkg.com/eslint-scope/-/eslint-scope-4.0.0.tgz#50bf3071e9338bcdc43331794a0cb533f0136172"
   dependencies:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
@@ -6916,7 +6916,7 @@ tslib@^1.8.0, tslib@^1.9.0:
 
 tslint@5.11.0:
   version "5.11.0"
-  resolved "http://npm.zhaopin.com/tslint/-/tslint-5.11.0.tgz#98f30c02eae3cde7006201e4c33cb08b48581eed"
+  resolved "https://registry.yarnpkg.com/tslint/-/tslint-5.11.0.tgz#98f30c02eae3cde7006201e4c33cb08b48581eed"
   dependencies:
     babel-code-frame "^6.22.0"
     builtin-modules "^1.1.1"
@@ -6937,7 +6937,7 @@ tsscmp@~1.0.0:
 
 tsutils@^2.27.2:
   version "2.27.2"
-  resolved "http://npm.zhaopin.com/tsutils/-/tsutils-2.27.2.tgz#60ba88a23d6f785ec4b89c6e8179cac9b431f1c7"
+  resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.27.2.tgz#60ba88a23d6f785ec4b89c6e8179cac9b431f1c7"
   dependencies:
     tslib "^1.8.1"
 
@@ -7368,7 +7368,7 @@ webpack-subresource-integrity@^1.1.0-rc.4:
 
 webpack@4.16.1:
   version "4.16.1"
-  resolved "http://npm.zhaopin.com/webpack/-/webpack-4.16.1.tgz#2c4b89ea648125c3e67bcca6adf49ce2c14b2d31"
+  resolved "https://registry.yarnpkg.com/webpack/-/webpack-4.16.1.tgz#2c4b89ea648125c3e67bcca6adf49ce2c14b2d31"
   dependencies:
     "@webassemblyjs/ast" "1.5.13"
     "@webassemblyjs/helper-module-context" "1.5.13"
