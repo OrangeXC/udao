@@ -247,17 +247,17 @@
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/@nguniversal/module-map-ngfactory-loader/-/module-map-ngfactory-loader-6.0.0.tgz#0dd26c3f1c26d17bb21b8dfc0da53d82b7f11028"
 
-"@ngx-loading-bar/core@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/core/-/core-2.1.1.tgz#e08f6766b5a04d5b1f69f19b9aef9c0e412ecedc"
+"@ngx-loading-bar/core@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/core/-/core-2.1.2.tgz#13656d27ece2bc384469899a0624a490f18bedd7"
   dependencies:
     tslib "^1.7.1"
 
-"@ngx-loading-bar/http-client@2.1.1":
-  version "2.1.1"
-  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/http-client/-/http-client-2.1.1.tgz#fc2831af3c20e8b3a5ab5f776812b24e8f837bfa"
+"@ngx-loading-bar/http-client@2.1.2":
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/http-client/-/http-client-2.1.2.tgz#49903c93986e874aa7b82f8350e6187595840487"
   dependencies:
-    "@ngx-loading-bar/core" "2.1.1"
+    "@ngx-loading-bar/core" "2.1.2"
     tslib "^1.7.1"
 
 "@schematics/angular@0.6.8":
