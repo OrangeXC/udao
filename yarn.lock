@@ -4,14 +4,14 @@
 
 "@angular-devkit/architect@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@angular-devkit%2farchitect/-/architect-0.7.5.tgz#e2d856b671fe8b0615db1efc144a7f75b55fb6e1"
+  resolved "https://registry.yarnpkg.com/@angular-devkit%2farchitect/-/architect-0.7.5.tgz#e2d856b671fe8b0615db1efc144a7f75b55fb6e1"
   dependencies:
     "@angular-devkit/core" "0.7.5"
     rxjs "^6.0.0"
 
 "@angular-devkit/build-angular@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@angular-devkit%2fbuild-angular/-/build-angular-0.7.5.tgz#1ae50c1c57e10919fc631da462037e63e19ea543"
+  resolved "https://registry.yarnpkg.com/@angular-devkit%2fbuild-angular/-/build-angular-0.7.5.tgz#1ae50c1c57e10919fc631da462037e63e19ea543"
   dependencies:
     "@angular-devkit/architect" "0.7.5"
     "@angular-devkit/build-optimizer" "0.7.5"
@@ -66,7 +66,7 @@
 
 "@angular-devkit/build-optimizer@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@angular-devkit%2fbuild-optimizer/-/build-optimizer-0.7.5.tgz#ded26831a68b94d3292a8d0036331331e3f27bfe"
+  resolved "https://registry.yarnpkg.com/@angular-devkit%2fbuild-optimizer/-/build-optimizer-0.7.5.tgz#ded26831a68b94d3292a8d0036331331e3f27bfe"
   dependencies:
     loader-utils "^1.1.0"
     source-map "^0.5.6"
@@ -75,7 +75,7 @@
 
 "@angular-devkit/build-webpack@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@angular-devkit%2fbuild-webpack/-/build-webpack-0.7.5.tgz#94d34d6bfdd7082793a6abea32319684e94a7068"
+  resolved "https://registry.yarnpkg.com/@angular-devkit%2fbuild-webpack/-/build-webpack-0.7.5.tgz#94d34d6bfdd7082793a6abea32319684e94a7068"
   dependencies:
     "@angular-devkit/architect" "0.7.5"
     "@angular-devkit/core" "0.7.5"
@@ -83,7 +83,7 @@
 
 "@angular-devkit/core@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@angular-devkit%2fcore/-/core-0.7.5.tgz#49f7854ccadf3ddda8d0ea4359543a1cbdc6854d"
+  resolved "https://registry.yarnpkg.com/@angular-devkit%2fcore/-/core-0.7.5.tgz#49f7854ccadf3ddda8d0ea4359543a1cbdc6854d"
   dependencies:
     ajv "~6.4.0"
     chokidar "^2.0.3"
@@ -92,7 +92,7 @@
 
 "@angular-devkit/schematics@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@angular-devkit%2fschematics/-/schematics-0.7.5.tgz#f46b121f29cb40ad6095285d27a515114a56c5d6"
+  resolved "https://registry.yarnpkg.com/@angular-devkit%2fschematics/-/schematics-0.7.5.tgz#f46b121f29cb40ad6095285d27a515114a56c5d6"
   dependencies:
     "@angular-devkit/core" "0.7.5"
     rxjs "^6.0.0"
@@ -111,7 +111,7 @@
 
 "@angular/cli@6.1.5":
   version "6.1.5"
-  resolved "http://npm.zhaopin.com/@angular%2fcli/-/cli-6.1.5.tgz#312c062631285ff06fd07ecde8afe22cdef5a0e1"
+  resolved "https://registry.yarnpkg.com/@angular%2fcli/-/cli-6.1.5.tgz#312c062631285ff06fd07ecde8afe22cdef5a0e1"
   dependencies:
     "@angular-devkit/architect" "0.7.5"
     "@angular-devkit/core" "0.7.5"
@@ -197,7 +197,7 @@
 
 "@angular/pwa@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@angular%2fpwa/-/pwa-0.7.5.tgz#cdc7ea0352d3fa1a743b64da3fca85bc70154349"
+  resolved "https://registry.yarnpkg.com/@angular%2fpwa/-/pwa-0.7.5.tgz#cdc7ea0352d3fa1a743b64da3fca85bc70154349"
   dependencies:
     "@angular-devkit/core" "0.7.5"
     "@angular-devkit/schematics" "0.7.5"
@@ -218,7 +218,7 @@
 
 "@ngtools/webpack@6.1.5":
   version "6.1.5"
-  resolved "http://npm.zhaopin.com/@ngtools%2fwebpack/-/webpack-6.1.5.tgz#134639686eb4519885ed27665babdf80ce098263"
+  resolved "https://registry.yarnpkg.com/@ngtools%2fwebpack/-/webpack-6.1.5.tgz#134639686eb4519885ed27665babdf80ce098263"
   dependencies:
     "@angular-devkit/core" "0.7.5"
     rxjs "^6.0.0"
@@ -227,11 +227,11 @@
 
 "@nguniversal/express-engine@6.1.0":
   version "6.1.0"
-  resolved "http://npm.zhaopin.com/@nguniversal%2fexpress-engine/-/express-engine-6.1.0.tgz#384d761556a0accc0738ae89b8a63afb43e76a86"
+  resolved "https://registry.yarnpkg.com/@nguniversal%2fexpress-engine/-/express-engine-6.1.0.tgz#384d761556a0accc0738ae89b8a63afb43e76a86"
 
 "@nguniversal/module-map-ngfactory-loader@6.1.0":
   version "6.1.0"
-  resolved "http://npm.zhaopin.com/@nguniversal%2fmodule-map-ngfactory-loader/-/module-map-ngfactory-loader-6.1.0.tgz#49eb65ed4dc3a3273c920b905e0925e0ed2fbcb8"
+  resolved "https://registry.yarnpkg.com/@nguniversal%2fmodule-map-ngfactory-loader/-/module-map-ngfactory-loader-6.1.0.tgz#49eb65ed4dc3a3273c920b905e0925e0ed2fbcb8"
 
 "@ngx-loading-bar/core@2.1.2":
   version "2.1.2"
@@ -248,7 +248,7 @@
 
 "@schematics/angular@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@schematics%2fangular/-/angular-0.7.5.tgz#ccb5ce587161b24042195e100be556ae19b3b7f6"
+  resolved "https://registry.yarnpkg.com/@schematics%2fangular/-/angular-0.7.5.tgz#ccb5ce587161b24042195e100be556ae19b3b7f6"
   dependencies:
     "@angular-devkit/core" "0.7.5"
     "@angular-devkit/schematics" "0.7.5"
@@ -256,7 +256,7 @@
 
 "@schematics/update@0.7.5":
   version "0.7.5"
-  resolved "http://npm.zhaopin.com/@schematics%2fupdate/-/update-0.7.5.tgz#c9cc68c4464ea4e29a2f3a7254172df768c86ac4"
+  resolved "https://registry.yarnpkg.com/@schematics%2fupdate/-/update-0.7.5.tgz#c9cc68c4464ea4e29a2f3a7254172df768c86ac4"
   dependencies:
     "@angular-devkit/core" "0.7.5"
     "@angular-devkit/schematics" "0.7.5"
@@ -281,7 +281,7 @@
 
 "@types/node@10.9.1":
   version "10.9.1"
-  resolved "http://npm.zhaopin.com/@types%2fnode/-/node-10.9.1.tgz#06f002136fbcf51e730995149050bb3c45ee54e6"
+  resolved "https://registry.yarnpkg.com/@types%2fnode/-/node-10.9.1.tgz#06f002136fbcf51e730995149050bb3c45ee54e6"
 
 "@types/node@^6.0.46":
   version "6.0.96"
