@@ -9,6 +9,6 @@ import { Component, Input } from '@angular/core';
 export class DetailAuthTransComponent {
   public isCollapsed = true;
 
-  @Input() ec21;
-  @Input() collins;
+  @Input() ec21: any;
+  @Input() collins: any;
 }

@@ -1,6 +1,12 @@
 import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
 import { MediaMatcher } from '@angular/cdk/layout';
 
+interface NavItem {
+  name: string;
+  link: string;
+  icon: string;
+}
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,7 +16,7 @@ import { MediaMatcher } from '@angular/cdk/layout';
 export class AppComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
 
-  navList = [
+  navList: Array<NavItem> = [
     {
       name: '主页',
       link: '/',

@@ -58,7 +58,7 @@ export class SearchComponent {
       });
   }
 
-  gotoDetail ({ entry }) {
+  gotoDetail ({ entry }: { entry: string }): void {
     this.router.navigate([`/detail/${entry}`]);
   }
 }

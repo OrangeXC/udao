@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class DetailPhrsListTabComponent {
-  @Input() input;
-  @Input() simple;
-  @Input() ec;
+  @Input() input: any;
+  @Input() simple: any;
+  @Input() ec: any;
 }

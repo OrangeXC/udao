@@ -122,7 +122,7 @@ export class DetailComponent implements OnInit, OnDestroy {
       : [];
   }
 
-  ngOnInit () {
+  ngOnInit (): void {
     this.details = this.state.get(DETAIL_KEY, null as any);
 
     if (!this.details) {
@@ -140,7 +140,7 @@ export class DetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnDestroy () {
+  ngOnDestroy (): void {
     if (typeof window === 'object') {
       this.state.set(DETAIL_KEY, null as any);
     }

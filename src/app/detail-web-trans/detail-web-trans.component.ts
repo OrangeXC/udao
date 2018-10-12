@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class DetailWebTransComponent {
-  @Input() webTrans;
-  @Input() special;
-  @Input() ee;
+  @Input() webTrans: any;
+  @Input() special: any;
+  @Input() ee: any;
 }
