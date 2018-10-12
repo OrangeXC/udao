@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./detail-transform.component.css']
 })
 export class DetailTransformComponent {
-  @Input () phrs;
-  @Input () syno;
-  @Input () relWord;
+  @Input () phrs: any;
+  @Input () syno: any;
+  @Input () relWord: any;
 }

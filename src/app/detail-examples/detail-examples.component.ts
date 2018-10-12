@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 
 export class DetailExamplesComponent {
-  @Input () blngSentsPart;
-  @Input () authSentsPart;
-  @Input () mediaSentsPart;
+  @Input () blngSentsPart: any;
+  @Input () authSentsPart: any;
+  @Input () mediaSentsPart: any;
 }
