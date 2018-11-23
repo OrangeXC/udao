@@ -357,19 +357,19 @@
   resolved "https://registry.yarnpkg.com/@nguniversal/module-map-ngfactory-loader/-/module-map-ngfactory-loader-7.0.2.tgz#2df0532f84d4f4e042adb294e3685fad28ed0622"
   integrity sha512-zZst1DfmWZdozNmYRu6vUacFLKreLVhGfpp/LmBrW/jDESHWU4AtRBQYtH8KfhKFSE+B6ehyGYHPfDdSa5sk7g==
 
-"@ngx-loading-bar/core@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/core/-/core-2.2.0.tgz#ad313bbbd69e4c52cc2d6f0a8b5911272371d16a"
-  integrity sha512-0jcnEzuhqE/c+4iAumJ/0D4GBWm4RRVas0+qXpX4Wm225SJoE5KupUOlMrvLnJNK2bn8NW31dEj80kJ+UzhE5A==
+"@ngx-loading-bar/core@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/core/-/core-3.0.0.tgz#86c6d036b5ad50950b5ea526db585f39d44f396a"
+  integrity sha512-DBH+bKf8M9uSk2791HbtN/JvcEmBxEbUCiOJ6PYrjbginH6dUn2NsSxnv3myu0lpx+7K3MusXLNImkB5JUh2QA==
   dependencies:
     tslib "^1.7.1"
 
-"@ngx-loading-bar/http-client@2.2.0":
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/http-client/-/http-client-2.2.0.tgz#4b5443feed5c53bc5b5f06119f771edbe89799f4"
-  integrity sha512-+eilxs10KncQWg7DQJLK2AoWnmTPidhVHNxfTOPHJVnmcyAFmTtk+lQbf5Ke3aC4d/KXZklkRyBizqDfvRvc9w==
+"@ngx-loading-bar/http-client@3.0.0":
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/@ngx-loading-bar/http-client/-/http-client-3.0.0.tgz#2fce2f60da37a48f2173ef4f08189eecf98d9215"
+  integrity sha512-7AHM3tmA2FDFXsKbL09vnRqqxdztpjilkP3U9zXB5Lkv3XtlJnZoQKFCSbmEusw30k3oAmY5id/ZE9X83uekZg==
   dependencies:
-    "@ngx-loading-bar/core" "2.2.0"
+    "@ngx-loading-bar/core" "3.0.0"
     tslib "^1.7.1"
 
 "@schematics/angular@7.0.6":
