@@ -1,5 +1,5 @@
-import { ChangeDetectorRef, Component, OnDestroy } from '@angular/core';
-import { MediaMatcher } from '@angular/cdk/layout';
+import { Component, OnInit } from '@angular/core';
+import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
 
 interface NavItem {
   name: string;
@@ -13,9 +13,8 @@ interface NavItem {
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnDestroy {
-  mobileQuery: MediaQueryList;
-
+export class AppComponent implements OnInit {
+  matches: Boolean = true;
   navList: Array<NavItem> = [
     {
       name: '主页',
@@ -32,15 +31,17 @@ export class AppComponent implements OnDestroy {
     }
   ];
 
-  private _mobileQueryListener: () => void;
+  constructor(public breakpointObserver: BreakpointObserver) {}
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
-    this.mobileQuery = media.matchMedia('(max-width: 600px)');
-    this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    this.mobileQuery.addListener(this._mobileQueryListener);
-  }
-
-  ngOnDestroy (): void {
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+  ngOnInit (): void {
+    this.breakpointObserver
+      .observe(['(max-width: 600px)'])
+      .subscribe((state: BreakpointState) => {
+        if (state.matches) {
+          this.matches = true;
+        } else {
+          this.matches = false;
+        }
+      });
   }
 }
