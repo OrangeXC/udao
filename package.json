@@ -27,7 +27,7 @@
     "@angular/platform-browser": "7.2.5",
     "@angular/platform-browser-dynamic": "7.2.5",
     "@angular/platform-server": "7.2.5",
-    "@angular/pwa": "0.13.1",
+    "@angular/pwa": "0.13.2",
     "@angular/router": "7.2.5",
     "@angular/service-worker": "7.2.5",
     "@nguniversal/express-engine": "7.1.0",
@@ -42,8 +42,8 @@
     "zone.js": "0.8.29"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.13.1",
-    "@angular/cli": "7.3.1",
+    "@angular-devkit/build-angular": "0.13.2",
+    "@angular/cli": "7.3.2",
     "@angular/compiler-cli": "7.2.5",
     "@angular/language-service": "7.2.5",
     "@types/jasmine": "3.3.9",
@@ -63,8 +63,8 @@
     "ts-loader": "5.3.3",
     "ts-node": "8.0.2",
     "tslint": "5.12.1",
-    "typescript": "3.2.4",
-    "webpack": "4.29.4",
+    "typescript": "3.3.3",
+    "webpack": "4.29.5",
     "webpack-cli": "^3.2.3"
   }
 }
