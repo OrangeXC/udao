@@ -46,7 +46,7 @@
     "@angular/cli": "7.3.6",
     "@angular/compiler-cli": "7.2.9",
     "@angular/language-service": "7.2.9",
-    "@types/jasmine": "3.3.9",
+    "@types/jasmine": "3.3.10",
     "@types/jasminewd2": "2.0.6",
     "@types/node": "11.11.3",
     "codelyzer": "5.0.0-beta.1",
@@ -65,6 +65,6 @@
     "tslint": "5.14.0",
     "typescript": "3.2.4",
     "webpack": "4.29.6",
-    "webpack-cli": "^3.2.3"
+    "webpack-cli": "^3.3.0"
   }
 }
