@@ -17,7 +17,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "8.0.0",
-    "@angular/cdk": "^8.0.0",
+    "@angular/cdk": "8.0.0",
     "@angular/common": "8.0.0",
     "@angular/compiler": "8.0.0",
     "@angular/core": "8.0.0",
@@ -30,13 +30,13 @@
     "@angular/router": "8.0.0",
     "@angular/service-worker": "8.0.0",
     "@nebular/eva-icons": "4.0.0",
-    "@nebular/theme": "^4.0.0",
+    "@nebular/theme": "4.0.0",
     "@nguniversal/express-engine": "7.1.1",
     "@nguniversal/module-map-ngfactory-loader": "7.1.1",
-    "@ngx-loading-bar/core": "^4.2.0",
+    "@ngx-loading-bar/core": "4.2.0",
     "@ngx-loading-bar/http-client": "4.2.0",
     "core-js": "2.6.5",
-    "eva-icons": "^1.1.1",
+    "eva-icons": "1.1.1",
     "express": "4.17.1",
     "hammerjs": "2.0.8",
     "rxjs": "6.5.2",
@@ -68,6 +68,6 @@
     "tslint": "5.17.0",
     "typescript": "3.4.5",
     "webpack": "4.32.2",
-    "webpack-cli": "^3.3.2"
+    "webpack-cli": "3.3.2"
   }
 }
