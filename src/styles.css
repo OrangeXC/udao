@@ -1,19 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import '~@nebular/theme/styles/prebuilt/default.css';
 
 body {
   font-family: Roboto, Arial, sans-serif;
   margin: 0;
 }
 
-.main-content {
-  max-width: 980px;
-  margin: 0 auto;
-  padding: 10px;
-}
-
-.full-width {
-  width: 100%;
+.text-center {
+  text-align: center;
 }
 
 .text-muted {
@@ -26,4 +20,38 @@ body {
 
 .text-success {
   color: #28a745;
+}
+
+.list-title {
+  font-size: 1.2rem;
+}
+
+.nb-theme-default h1 {
+  font-size: 1.875rem;
+  line-height: 2.5rem;
+}
+
+.nb-theme-default h2 {
+  font-size: 1.675rem;
+  line-height: 2.5rem;
+}
+
+.nb-theme-default h3 {
+  font-size: 1.475rem;
+  line-height: 2.5rem;
+}
+
+.nb-theme-default h4 {
+  font-size: 1.275rem;
+  line-height: 2.5rem;
+}
+
+.nb-theme-default h5 {
+  font-size: 1.075rem;
+  line-height: 2.5rem;
+}
+
+.nb-theme-default h6 {
+  font-size: 1rem;
+  line-height: 2.5rem;
 }

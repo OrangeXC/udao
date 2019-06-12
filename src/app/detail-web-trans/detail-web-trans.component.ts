@@ -1,7 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-detail-web-trans',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './detail-web-trans.component.html',
   styleUrls: ['./detail-web-trans.component.css']
 })

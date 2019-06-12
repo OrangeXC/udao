@@ -1,8 +1,4 @@
-.result-wrap {
-  margin-top: 10px;
-}
-
-.mat-list-item:hover {
+.list-item:hover {
   cursor: pointer;
   background: rgba(0, 0, 0, .04);
 }

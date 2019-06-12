@@ -1,47 +1,63 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, ChangeDetectionStrategy } from '@angular/core';
+import { Router, NavigationStart } from '@angular/router';
 import { BreakpointObserver, BreakpointState } from '@angular/cdk/layout';
-
-interface NavItem {
-  name: string;
-  link: string;
-  icon: string;
-}
+import { NbSidebarService, NbMenuItem } from '@nebular/theme';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-root',
+  changeDetection: ChangeDetectionStrategy.OnPush,
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
 
-export class AppComponent implements OnInit {
-  matches: Boolean = true;
-  navList: Array<NavItem> = [
+export class AppComponent {
+  isSidebarFixed: Boolean = false;
+  menuList: NbMenuItem[] = [
     {
-      name: '主页',
+      title: '主页',
       link: '/',
       icon: 'home'
     }, {
-      name: '搜索',
+      title: '搜索',
       link: '/search',
       icon: 'search'
     }, {
-      name: '翻译',
+      title: '翻译',
       link: '/translate',
-      icon: 'g_translate'
+      icon: 'globe'
     }
   ];
 
-  constructor(public breakpointObserver: BreakpointObserver) {}
-
-  ngOnInit (): void {
-    this.breakpointObserver
+  constructor(
+    public breakpointObserver: BreakpointObserver,
+    private sidebarService: NbSidebarService,
+    public router: Router
+  ) {
+    breakpointObserver
       .observe(['(max-width: 600px)'])
       .subscribe((state: BreakpointState) => {
         if (state.matches) {
-          this.matches = true;
+          this.sidebarService.collapse('left');
+          this.isSidebarFixed = true;
         } else {
-          this.matches = false;
+          this.sidebarService.expand('left');
+          this.isSidebarFixed = false;
         }
       });
+
+    router.events.pipe(
+      filter(e => e instanceof NavigationStart)
+    ).subscribe(e => {
+      if (e['url'] === '/') {
+        this.menuList[0].link = '';
+      } else {
+        this.menuList[0].link = '/';
+      }
+    });
+  }
+
+  toggle () {
+    this.sidebarService.toggle(false, 'left');
   }
 }

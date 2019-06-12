@@ -1,11 +1,11 @@
-<mat-tab-group [dynamicHeight]="true">
-  <mat-tab label="词组短语" *ngIf="phrs && phrs.length">
+<nb-tabset fullWidth>
+  <nb-tab tabTitle="词组短语" *ngIf="phrs && phrs.length">
     <p *ngFor="let phr of phrs">
       <a [routerLink]="['/detail', phr.phr.headword.l.i]">{{ phr.phr.headword.l.i }}</a>
       <span>{{ phr.phr.trs[0].tr.l.i }}</span>
     </p>
-  </mat-tab>
-  <mat-tab label="同近义词" *ngIf="syno && syno.length">
+  </nb-tab>
+  <nb-tab tabTitle="同近义词" *ngIf="syno && syno.length">
     <ng-template ngFor let-item [ngForOf]="syno">
       <p>{{ item.syno.pos }} {{ item.syno.tran }}</p>
       <p>
@@ -14,8 +14,8 @@
         </ng-template>
       </p>
     </ng-template>
-  </mat-tab>
-  <mat-tab label="同根词" *ngIf="relWord && relWord.rels">
+  </nb-tab>
+  <nb-tab tabTitle="同根词" *ngIf="relWord && relWord.rels">
     <p>词根：{{ relWord.word }}</p>
     <ng-template ngFor let-item [ngForOf]="relWord.rels">
       <p>{{ item.rel.pos }}</p>
@@ -24,5 +24,5 @@
         {{ word.tran }}
       </p>
     </ng-template>
-  </mat-tab>
-</mat-tab-group>
+  </nb-tab>
+</nb-tabset>

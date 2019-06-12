@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
-import { MatSnackBar } from '@angular/material/snack-bar';
+import { NbToastrService } from '@nebular/theme';
 
 @Component({
   selector: 'app-search',
@@ -10,24 +10,27 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 
 export class SearchComponent {
-  public value = '';
+  public searchText = '';
   public query = '';
   public entries = [];
   public language = '';
+  public isLoading = false;
+  public isResultShow = false;
 
   constructor(
     private http: HttpClient,
     private router: Router,
-    public snackBar: MatSnackBar
+    public toastrService: NbToastrService
   ) {}
 
-  onKey (box) {
-    box.blur();
-    const value = box.value;
+  onKey () {
+    const value = this.searchText;
 
     this.query = '';
     this.entries = [];
     this.language = '';
+    this.isLoading = true;
+    this.isResultShow = true;
 
     if (!value) {
       return;
@@ -45,16 +48,20 @@ export class SearchComponent {
 
         if (data['entries'] && data['entries'].length) {
           this.entries = data['entries'];
+
         } else {
-          this.snackBar.open(`未查到关键词 ${value}`, '', {
-            verticalPosition: 'top',
-            duration: 3000
+          this.isResultShow = false;
+
+          this.toastrService.show(`未查到关键词 ${value}`, '查询失败', {
+            status: 'danger'
           });
         }
 
         if (data['language']) {
           this.language = data['language'];
         }
+
+        this.isLoading = false;
       });
   }
 

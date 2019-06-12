@@ -1,5 +1,5 @@
-<mat-tab-group [dynamicHeight]="true">
-  <mat-tab label="21世纪大英汉词典" *ngIf="ec21 && ec21.length">
+<nb-tabset fullWidth>
+  <nb-tab tabTitle="21世纪大英汉词典" *ngIf="ec21 && ec21.length">
     <p>
       <b>{{ ec21[0]['return-phrase'].l.i[0] }}</b>
       <span class="text-muted" *ngIf="ec21[0].phone">[{{ ec21[0].phone }}]</span>
@@ -49,8 +49,8 @@
       {{ isCollapsed ? '更多结果' :  '收起结果' }}
     </button>
     <small class="text-muted">以上来源于：《21世纪大英汉词典》</small>
-  </mat-tab>
-  <mat-tab label="柯林斯英汉双解大词典" *ngIf="collins && collins.headword">
+  </nb-tab>
+  <nb-tab tabTitle="柯林斯英汉双解大词典" *ngIf="collins && collins.headword">
     <p>
       <b class="text-danger">{{ collins.headword }}</b> -
       <i class="text-muted">{{ collins.phonetic }}</i> -
@@ -76,5 +76,5 @@
         </ng-template>
       </li>
     </ol>
-  </mat-tab>
-</mat-tab-group>
+  </nb-tab>
+</nb-tabset>

@@ -1,5 +1,5 @@
-<mat-tab-group [dynamicHeight]="true">
-  <mat-tab label="双语例句" *ngIf="blngSentsPart && blngSentsPart.length">
+<nb-tabset fullWidth>
+  <nb-tab tabTitle="双语例句" *ngIf="blngSentsPart && blngSentsPart.length">
     <ol>
       <li *ngFor="let item of blngSentsPart">
         <p [innerHTML]="item['sentence-eng']"></p>
@@ -7,8 +7,8 @@
         <p class="text-muted"><small>{{ item.source }}</small></p>
       </li>
     </ol>
-  </mat-tab>
-  <mat-tab label="原声例句" *ngIf="mediaSentsPart && mediaSentsPart.length">
+  </nb-tab>
+  <nb-tab tabTitle="原声例句" *ngIf="mediaSentsPart && mediaSentsPart.length">
     <ol>
       <li *ngFor="let item of mediaSentsPart">
         <p [innerHTML]="item.eng"></p>
@@ -20,13 +20,13 @@
         </p>
       </li>
     </ol>
-  </mat-tab>
-  <mat-tab label="权威例句" *ngIf="authSentsPart && authSentsPart.length">
+  </nb-tab>
+  <nb-tab tabTitle="权威例句" *ngIf="authSentsPart && authSentsPart.length">
     <ol>
       <li *ngFor="let item of authSentsPart">
         <p [innerHTML]="item.foreign"></p>
         <p class="text-muted"><small [innerHTML]="item.source"></small></p>
       </li>
     </ol>
-  </mat-tab>
-</mat-tab-group>
+  </nb-tab>
+</nb-tabset>

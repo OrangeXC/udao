@@ -16,13 +16,15 @@ import {
   HttpEvent,
   HTTP_INTERCEPTORS
 } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { LoadingBarHttpClientModule } from '@ngx-loading-bar/http-client';
 
-import { MaterialModule } from './material.module';
+import { NabularModule, NabularService } from './nebular.module';
+import { NbThemeModule, NbMenuModule, NbToastrModule } from '@nebular/theme';
 
 import { AppComponent } from './app.component';
 import { TranslateComponent } from './translate/translate.component';
@@ -52,12 +54,16 @@ export class Interceptor implements HttpInterceptor {
 
 @NgModule({
   imports: [
+    NbThemeModule.forRoot({ name: 'default' }),
+    NbMenuModule.forRoot(),
+    NbToastrModule.forRoot(),
+    NabularModule,
     BrowserModule.withServerTransition({ appId: 'udao' }),
     BrowserTransferStateModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     HttpClientModule,
-    MaterialModule,
+    FormsModule,
     LoadingBarHttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
@@ -75,6 +81,7 @@ export class Interceptor implements HttpInterceptor {
   ],
   providers: [
     AppComponent,
+    ...NabularService,
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
   ],
   bootstrap: [ AppComponent ]

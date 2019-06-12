@@ -1,87 +1,12 @@
-.home-container {
-  display: flex;
-  flex-direction: column;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-}
-
-.home-is-mobile .home-toolbar {
-  position: fixed;
-  /* Make sure the toolbar will stay on top of the content as it scrolls past. */
-  z-index: 2;
-}
-
-h1.home-app-name {
+.home-app-name {
+  font-size: 1.5rem;
   margin-left: 8px;
-}
-
-.home-sidenav-container {
-  /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-     causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-  flex: 1;
-}
-
-.home-is-mobile .home-sidenav-container {
-  /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
-     `<body>` to be our scrolling element for mobile layouts. */
-  flex: 1 0 auto;
 }
 
 .toolbar-spacer {
   flex: 1 1 auto;
 }
 
-.side-nav {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-}
-
-.side-nav li .mat-list-item {
-  display: list-item;
-  margin: 0;
-  padding: 0;
-
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-color: rgba(0, 0, 0, .06);
-
-  text-align: -webkit-match-parent;
-
-  color: rgba(0, 0, 0, .54);
-}
-
-.side-nav li a {
-  display: block;
-  position: relative;
-
-  line-height: 47px;
-  text-decoration: none;
-
-  font-size: 14px;
-  font-weight: 400;
-
-  transition: all .3s;
-}
-
-.side-nav li a:hover {
-  background: #fafafa;
-  color: #3f51b5;
-}
-
-.side-nav li a.active {
-  color: #3f51b5;
-}
-
 .github-button {
-  width: 28px;
-  height: 28px;
-}
-
-.github-button img {
-  width: 100%;
-  height: 100%;
+  line-height: 1;
 }

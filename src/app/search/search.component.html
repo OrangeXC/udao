@@ -1,17 +1,20 @@
-<div class="main-content">
-  <p class="lead text-center">英文单词模糊搜索</p>
-  <mat-form-field class="full-width">
-    <input type="search" matInput placeholder="请输入模糊搜索关键字" #box (keyup.enter)="onKey(box)">
-  </mat-form-field>
-  <div class="result-wrap" *ngIf="query">
-    <div *ngIf="entries.length">
+<h2 class="text-center">英文单词模糊搜索</h2>
+<nb-card>
+  <nb-card-body>
+    <input type="search" nbInput fullWidth placeholder="请输入模糊搜索关键字" [(ngModel)]="searchText" (keyup.enter)="onKey(box)" />
+  </nb-card-body>
+</nb-card>
+<nb-card *ngIf="isResultShow" [nbSpinner]="isLoading" nbSpinnerStatus="primary">
+  <nb-card-body>
+    <div *ngIf="query && entries.length">
       <h5 class="text-center">搜索结果({{ entries.length }})</h5>
-      <mat-list>
-        <mat-list-item *ngFor="let item of entries" (click)="gotoDetail(item)">
-          <h3 matLine> {{ item.entry }} </h3>
-          <p matLine> {{ item.explain }} </p>
-        </mat-list-item>
-      </mat-list>
+      <nb-list>
+        <nb-list-item class="list-item" *ngFor="let item of entries" (click)="gotoDetail(item)">
+          <p class="list-title"> {{ item.entry }} </p>
+          <p> {{ item.explain }} </p>
+        </nb-list-item>
+      </nb-list>
     </div>
-  </div>
-</div>
+    <p *ngIf="!query">正在查询</p>
+  </nb-card-body>
+</nb-card>

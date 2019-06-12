@@ -85,6 +85,17 @@
     rxjs "6.4.0"
     webpack-merge "4.2.1"
 
+"@angular-devkit/core@8.0.0":
+  version "8.0.0"
+  resolved "http://npm.zhaopin.com/@angular-devkit%2fcore/-/core-8.0.0.tgz#a0ca65d8d0f928db9288316b1f3346d21f722213"
+  integrity sha512-wYf4zzpYj5Y673DG8iteK0GsDDuXBKN/TOXm4lUwmXcz8QHTD+BfR6qA5TBDqlMGpU7CP1/0vgbv2px17CDETQ==
+  dependencies:
+    ajv "6.10.0"
+    fast-json-stable-stringify "2.0.0"
+    magic-string "0.25.2"
+    rxjs "6.4.0"
+    source-map "0.7.3"
+
 "@angular-devkit/core@8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-8.0.1.tgz#4a38141006deefa2f60f105b458d32885ffc1bec"
@@ -95,6 +106,14 @@
     magic-string "0.25.2"
     rxjs "6.4.0"
     source-map "0.7.3"
+
+"@angular-devkit/schematics@8.0.0":
+  version "8.0.0"
+  resolved "http://npm.zhaopin.com/@angular-devkit%2fschematics/-/schematics-8.0.0.tgz#53d14646c6286b0397417990fc83e3e9a6ecf233"
+  integrity sha512-IXJOs/DkDqNbfG76sNNY5ePZ37rjkMUopmtvhN6/U1hQFwTpGa9N0bCHFphcKraXeS6Jfox5XwFEStc/1xyhfw==
+  dependencies:
+    "@angular-devkit/core" "8.0.0"
+    rxjs "6.4.0"
 
 "@angular-devkit/schematics@8.0.1":
   version "8.0.1"
@@ -111,9 +130,9 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@8.0.0":
+"@angular/cdk@^8.0.0":
   version "8.0.0"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.0.0.tgz#34ca95e71d71780b29b5ba07318c88c4577bdc25"
+  resolved "http://npm.zhaopin.com/@angular%2fcdk/-/cdk-8.0.0.tgz#34ca95e71d71780b29b5ba07318c88c4577bdc25"
   integrity sha512-2vsRWEHNARe0iRmqgzvM67gwfRy+aKvdef4Qu9L+ndSsTrrZT3tSgG8SMn1v9SfBHnx5G8mo4d1AMquXG69AuQ==
   dependencies:
     tslib "^1.7.1"
@@ -343,6 +362,18 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
+"@nebular/eva-icons@4.0.0":
+  version "4.0.0"
+  resolved "http://npm.zhaopin.com/@nebular%2feva-icons/-/eva-icons-4.0.0.tgz#08d5f64143d4c3e7f772a7829e182d34c8ebc876"
+  integrity sha512-Cce27XeE1U8opWyf4jXZWXDxx0EsaxLuz5SA5iyyBPV21JcXXdhmO8+jFwnu0YlqrwNePF0pKj/7GYJGs1JWfw==
+
+"@nebular/theme@^4.0.0":
+  version "4.0.0"
+  resolved "http://npm.zhaopin.com/@nebular%2ftheme/-/theme-4.0.0.tgz#697b46ab812e24132275bc4d73161de6d2ccadbc"
+  integrity sha512-wFPLMRvHKkcKH/oKuc8TtXFJOaeFWYOvG7AvkgI3IqtkHa+x8fEsz4EMLFPOh4XADOjxXHo8wAHI3vhsgyavcg==
+  dependencies:
+    intersection-observer "0.5.0"
+
 "@ngtools/webpack@8.0.1":
   version "8.0.1"
   resolved "https://registry.yarnpkg.com/@ngtools/webpack/-/webpack-8.0.1.tgz#892ca23277e2602447fc093380dae585782d1557"
@@ -377,6 +408,14 @@
   integrity sha512-r8M9XAdKZC98LQhxyDA+pq5V9SS471VLI82UlsnBz17i3K2cHWVBjkwomEQq9i2xBNS14DOY/tAlxUlX+WAhSg==
   dependencies:
     tslib "^1.9.0"
+
+"@schematics/angular@8.0.0":
+  version "8.0.0"
+  resolved "http://npm.zhaopin.com/@schematics%2fangular/-/angular-8.0.0.tgz#47954888fb8acbc3600235db7a46229c47fe5d9c"
+  integrity sha512-c/cFpe+u7Xh4xX3/kn9BSRY4YhdO0OsDbRK0pGLDJFFs5JGvwoURtNXn4/4dVlsj3PWyNhxK0Ljl3dyw3NQBHA==
+  dependencies:
+    "@angular-devkit/core" "8.0.0"
+    "@angular-devkit/schematics" "8.0.0"
 
 "@schematics/angular@8.0.1":
   version "8.0.1"
@@ -2429,6 +2468,11 @@ etag@~1.8.1:
   resolved "https://registry.yarnpkg.com/etag/-/etag-1.8.1.tgz#41ae2eeb65efa62268aebfea83ac7d79299b0887"
   integrity sha1-Qa4u62XvpiJorr/qg6x9eSmbCIc=
 
+eva-icons@^1.1.1:
+  version "1.1.1"
+  resolved "http://npm.zhaopin.com/eva-icons/-/eva-icons-1.1.1.tgz#a5e7529ed4d04e913db9db33b749f0dac415186a"
+  integrity sha512-Uf7JQMA1lWQLLtHuk1lbMlwP4i3W0jjTy5SCYBGeR6DLPub5Ls2QiJlVT59llphVObXSVwaMuofevwgUZWf1CQ==
+
 eventemitter3@^3.0.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/eventemitter3/-/eventemitter3-3.1.0.tgz#090b4d6cdbd645ed10bf750d4b5407942d7ba163"
@@ -3354,6 +3398,11 @@ interpret@^1.0.0, interpret@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/interpret/-/interpret-1.2.0.tgz#d5061a6224be58e8083985f5014d844359576296"
   integrity sha512-mT34yGKMNceBQUoVn7iCDKDntA7SC6gycMAWzGx1z/CMCTV7b2AAtXlo3nRyHZ1FelRkQbQjprHSYGwzLtkVbw==
+
+intersection-observer@0.5.0:
+  version "0.5.0"
+  resolved "http://npm.zhaopin.com/intersection-observer/-/intersection-observer-0.5.0.tgz#9fe8bee3953c755b1485c38efd9633d535775ea6"
+  integrity sha1-n+i+45U8dVsUhcOO/ZYz1TV3XqY=
 
 invariant@^2.2.2:
   version "2.2.4"
