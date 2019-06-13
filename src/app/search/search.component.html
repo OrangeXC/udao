@@ -1,7 +1,7 @@
 <h2 class="text-center">英文单词模糊搜索</h2>
 <nb-card>
   <nb-card-body>
-    <input type="search" nbInput fullWidth placeholder="请输入模糊搜索关键字" [(ngModel)]="searchText" (keyup.enter)="onKey(box)" />
+    <input type="search" nbInput fullWidth placeholder="请输入模糊搜索关键字" [(ngModel)]="searchText" (keyup.enter)="onKey()" />
   </nb-card-body>
 </nb-card>
 <nb-card *ngIf="isResultShow" [nbSpinner]="isLoading" nbSpinnerStatus="primary">

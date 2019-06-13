@@ -80,7 +80,6 @@ export class Interceptor implements HttpInterceptor {
     DetailExamplesComponent
   ],
   providers: [
-    AppComponent,
     ...NabularService,
     { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
   ],
@@ -89,9 +88,9 @@ export class Interceptor implements HttpInterceptor {
 
 export class AppModule {
   constructor(
-    @Inject(PLATFORM_ID) private platformId: object,
+    @Inject(PLATFORM_ID) private platformId: Object,
     @Inject(APP_ID) private appId: string) {
-    const platform: string = isPlatformBrowser(platformId) ?
+    const platform = isPlatformBrowser(platformId) ?
       'in the browser' : 'on the server';
     console.log(`Running ${platform} with appId=${appId}`);
   }
