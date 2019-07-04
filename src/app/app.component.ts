@@ -12,7 +12,7 @@ import { filter } from 'rxjs/operators';
 })
 
 export class AppComponent {
-  isSidebarFixed: Boolean = false;
+  isSidebarFixed = false;
   menuList: NbMenuItem[] = [
     {
       title: '主页',
@@ -56,8 +56,7 @@ export class AppComponent {
       }
     });
   }
-
-  toggle () {
+  toggle() {
     this.sidebarService.toggle(false, 'left');
   }
 }

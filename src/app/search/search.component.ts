@@ -23,7 +23,7 @@ export class SearchComponent {
     public toastrService: NbToastrService
   ) {}
 
-  onKey () {
+  onKey() {
     const value = this.searchText;
 
     this.query = '';
@@ -65,7 +65,7 @@ export class SearchComponent {
       });
   }
 
-  gotoDetail ({ entry }: { entry: string }): void {
+  gotoDetail({ entry }: { entry: string }): void {
     this.router.navigate([`/detail/${entry}`]);
   }
 }
