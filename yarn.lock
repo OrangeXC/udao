@@ -351,15 +351,15 @@
     tree-kill "1.2.1"
     webpack-sources "1.3.0"
 
-"@nguniversal/express-engine@8.0.0-rc.1":
-  version "8.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-8.0.0-rc.1.tgz#95f05b6fdac036f0deda7813e8ee08fa4b4edfd2"
-  integrity sha512-WGJZTxkCMgDHK3UQHi6h7AL9Us7Vroz+pAS60lKJ0oNUCxoJ9S+i4jXfb6rtR5DtOTBqUy8O8fQ0U0HZOhhoWA==
+"@nguniversal/express-engine@8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-8.1.0.tgz#11b429afe63d249ccb7d05328c9003509312ada7"
+  integrity sha512-OT8o+sSLAPWr3F2CO3a4CsQAitBQIt+6i78jOFhaii5Agsdy6XKbSf9yPhpn0IjoKdTjk77KJBcNcUPxWccS/g==
 
-"@nguniversal/module-map-ngfactory-loader@8.0.0-rc.1":
-  version "8.0.0-rc.1"
-  resolved "https://registry.yarnpkg.com/@nguniversal/module-map-ngfactory-loader/-/module-map-ngfactory-loader-8.0.0-rc.1.tgz#ca82a170fe72057b2379a55147580803c951319e"
-  integrity sha512-dPac8uahg4XHSvrXP0/XkU/LaFhAHJ8N9h93ttXfrEXNMukarOmbyKzAuX9DVjcE6+lll1UCZtsEweRvQBZPbw==
+"@nguniversal/module-map-ngfactory-loader@8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/module-map-ngfactory-loader/-/module-map-ngfactory-loader-8.1.0.tgz#a4288d8928c50548a3901ccf5e761b581f5e21d0"
+  integrity sha512-FM0xRH/vO96gzaFnruB5nSFstY5rcn0dRc+I6hr/d7UORg4ETO4QdpppFUcR0fG7Cf0H4Y5sHJw6Q4epApj/aQ==
 
 "@ngx-loading-bar/core@4.2.0":
   version "4.2.0"
@@ -428,10 +428,15 @@
   resolved "https://registry.yarnpkg.com/@types/minimatch/-/minimatch-3.0.3.tgz#3dca0e3f33b200fc7d1139c0cd96c1268cadfd9d"
   integrity sha512-tHq6qdbT9U1IRSGf14CL0pUlULksvY9OZ+5eEgl1N7t+OA3tGvNpxJCzuKQlsNgCVwbAs670L1vcVQi8j9HjnA==
 
-"@types/node@*", "@types/node@12.0.10":
+"@types/node@*":
   version "12.0.10"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.10.tgz#51babf9c7deadd5343620055fc8aff7995c8b031"
   integrity sha512-LcsGbPomWsad6wmMNv7nBLw7YYYyfdYcz6xryKYQhx89c3XXan+8Q6AJ43G5XDIaklaVkK3mE4fCb0SBvMiPSQ==
+
+"@types/node@12.0.12":
+  version "12.0.12"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.12.tgz#cc791b402360db1eaf7176479072f91ee6c6c7ca"
+  integrity sha512-Uy0PN4R5vgBUXFoJrKryf5aTk3kJ8Rv3PdlHjl6UaX+Cqp1QE0yPQ68MPXGrZOfG7gZVNDIJZYyot0B9ubXUrQ==
 
 "@types/source-list-map@*":
   version "0.1.2"
