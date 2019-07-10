@@ -328,15 +328,15 @@
     lodash "^4.17.11"
     to-fast-properties "^2.0.0"
 
-"@nebular/eva-icons@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@nebular/eva-icons/-/eva-icons-4.1.0.tgz#4873de8ec525dfb1a19c117f55e3a0c273f48d90"
-  integrity sha512-ZN/vBjn6fZ//aQkj8nntZMRhyC6OzxES1MK8t64fQJmG0gNb9gUrgbQEJh9o3X1ZUYd6LZgerbZ5yLGCue8+wg==
+"@nebular/eva-icons@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@nebular/eva-icons/-/eva-icons-4.1.1.tgz#bf57aaaa54d8c77f2fa47352c1927c99bdf9ba7a"
+  integrity sha512-EGVD/xR/B5EoULFbz1oyTiLxvx5Qe79C7+AQfJYLKzo25pitmCw8nxOxwgg3RcjYPlfjxeBm6pfFDYEhFMkXPA==
 
-"@nebular/theme@4.1.0":
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/@nebular/theme/-/theme-4.1.0.tgz#10a51909f130d85a6e62c57484d1afbaa4aea4da"
-  integrity sha512-pfYR7vrqcsJ0TBLXzQhk2FQbC9FXeQ5RR/timCkByswY/W87IhN10onSlLgm/DPlVvZq0T0vDBrl50/sjtU2xQ==
+"@nebular/theme@4.1.1":
+  version "4.1.1"
+  resolved "https://registry.yarnpkg.com/@nebular/theme/-/theme-4.1.1.tgz#72a9a5187dee330c186420b61415e983796cdf27"
+  integrity sha512-9pDD/stz6ZAEsAYoo0JBIdIh79/hsJPOASZcsl/j4jWfyAT0lovuaEZKMHUupYAj9t4gp7RbzDAetUcWQFcb4g==
   dependencies:
     intersection-observer "0.5.0"
 
@@ -433,10 +433,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.10.tgz#51babf9c7deadd5343620055fc8aff7995c8b031"
   integrity sha512-LcsGbPomWsad6wmMNv7nBLw7YYYyfdYcz6xryKYQhx89c3XXan+8Q6AJ43G5XDIaklaVkK3mE4fCb0SBvMiPSQ==
 
-"@types/node@12.6.1":
-  version "12.6.1"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.1.tgz#d5544f6de0aae03eefbb63d5120f6c8be0691946"
-  integrity sha512-rp7La3m845mSESCgsJePNL/JQyhkOJA6G4vcwvVgkDAwHhGdq5GCumxmPjEk1MZf+8p5ZQAUE7tqgQRQTXN7uQ==
+"@types/node@12.6.2":
+  version "12.6.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.2.tgz#a5ccec6abb6060d5f20d256fb03ed743e9774999"
+  integrity sha512-gojym4tX0FWeV2gsW4Xmzo5wxGjXGm550oVUII7f7G5o4BV6c7DBdiG1RRQd+y1bvqRyYtPfMK85UM95vsapqQ==
 
 "@types/source-list-map@*":
   version "0.1.2"
