@@ -110,10 +110,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@8.0.2":
-  version "8.0.2"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.0.2.tgz#599b7fd06caed8cbea41f8f7874ddcea5dfc99ce"
-  integrity sha512-Tv9M0vuTp7Ogk7mRiEpzBG9x5289FXe+WH0VKqN4zTzF/taTgGEuJBLDcFrwQMW0mFpGP7acVOiopgH+nClytg==
+"@angular/cdk@8.1.0":
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.1.0.tgz#6eda3e3ecfe157e7c7790b6d1c7e2d7e9f59dd1e"
+  integrity sha512-CKZTtLWNSSM+DmZS5IHhhh+Tb3+N3/WnINq55yQrupk0hIsfyssMTBp6GHogE9btfo9+73B5fSK+VNj6VuD/Qw==
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -433,10 +433,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.10.tgz#51babf9c7deadd5343620055fc8aff7995c8b031"
   integrity sha512-LcsGbPomWsad6wmMNv7nBLw7YYYyfdYcz6xryKYQhx89c3XXan+8Q6AJ43G5XDIaklaVkK3mE4fCb0SBvMiPSQ==
 
-"@types/node@12.6.2":
-  version "12.6.2"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.2.tgz#a5ccec6abb6060d5f20d256fb03ed743e9774999"
-  integrity sha512-gojym4tX0FWeV2gsW4Xmzo5wxGjXGm550oVUII7f7G5o4BV6c7DBdiG1RRQd+y1bvqRyYtPfMK85UM95vsapqQ==
+"@types/node@12.6.3":
+  version "12.6.3"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.3.tgz#44d507c5634f85e7164707ca36bba21b5213d487"
+  integrity sha512-7TEYTQT1/6PP53NftXXabIZDaZfaoBdeBm8Md/i7zsWRoBe0YwOXguyK8vhHs8ehgB/w9U4K/6EWuTyp0W6nIA==
 
 "@types/source-list-map@*":
   version "0.1.2"
