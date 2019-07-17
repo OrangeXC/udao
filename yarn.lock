@@ -110,10 +110,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/cdk@8.1.0":
-  version "8.1.0"
-  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.1.0.tgz#6eda3e3ecfe157e7c7790b6d1c7e2d7e9f59dd1e"
-  integrity sha512-CKZTtLWNSSM+DmZS5IHhhh+Tb3+N3/WnINq55yQrupk0hIsfyssMTBp6GHogE9btfo9+73B5fSK+VNj6VuD/Qw==
+"@angular/cdk@8.1.1":
+  version "8.1.1"
+  resolved "https://registry.yarnpkg.com/@angular/cdk/-/cdk-8.1.1.tgz#11b11bbab7316b3fa1f9eb380211bfde0a335cc7"
+  integrity sha512-5hBmhrHf9+WjGVIT8gbhT0Nh37BAjgI2TGRkt1o4qX8cG+1B6gU2MxM+CDJ7PhxSJi9lW93lq2AMuWwnRSllyg==
   dependencies:
     tslib "^1.7.1"
   optionalDependencies:
@@ -433,10 +433,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-12.0.10.tgz#51babf9c7deadd5343620055fc8aff7995c8b031"
   integrity sha512-LcsGbPomWsad6wmMNv7nBLw7YYYyfdYcz6xryKYQhx89c3XXan+8Q6AJ43G5XDIaklaVkK3mE4fCb0SBvMiPSQ==
 
-"@types/node@12.6.3":
-  version "12.6.3"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.3.tgz#44d507c5634f85e7164707ca36bba21b5213d487"
-  integrity sha512-7TEYTQT1/6PP53NftXXabIZDaZfaoBdeBm8Md/i7zsWRoBe0YwOXguyK8vhHs8ehgB/w9U4K/6EWuTyp0W6nIA==
+"@types/node@12.6.6":
+  version "12.6.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-12.6.6.tgz#831587377c35bb28fa33b6fe5f849a26a3f4a412"
+  integrity sha512-SMgj3x28MkJyHdWaMv/g/ca3LYDi5gR7O8mX0VKazvFOnmlDXctSEdd/8jfSqozjKFK1R9If1QZWkafX7yQTpA==
 
 "@types/source-list-map@*":
   version "0.1.2"
@@ -1848,11 +1848,6 @@ copy-webpack-plugin@5.0.3:
     schema-utils "^1.0.0"
     serialize-javascript "^1.7.0"
     webpack-log "^2.0.0"
-
-core-js@2.6.5:
-  version "2.6.5"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.5.tgz#44bc8d249e7fb2ff5d00e0341a7ffb94fbf67895"
-  integrity sha512-klh/kDpwX8hryYL14M9w/xei6vrv6sE8gTHDG7/T/+SEovB/G4ejwcfE/CBzO6Edsu+OETZMZ3wcX/EjUkrl5A==
 
 core-js@3.1.4, core-js@^3.1.3:
   version "3.1.4"
