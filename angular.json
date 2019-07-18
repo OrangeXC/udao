@@ -11,7 +11,7 @@
       "prefix": "app",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "nyan-builder:browser",
           "options": {
             "outputPath": "dist/browser",
             "index": "src/index.html",
@@ -57,7 +57,7 @@
           }
         },
         "serve": {
-          "builder": "@angular-devkit/build-angular:dev-server",
+          "builder": "nyan-builder:dev-server",
           "options": {
             "browserTarget": "udao:build"
           },
@@ -74,7 +74,7 @@
           }
         },
         "test": {
-          "builder": "@angular-devkit/build-angular:karma",
+          "builder": "nyan-builder:karma",
           "options": {
             "main": "src/test.ts",
             "polyfills": "src/polyfills.ts",
@@ -117,7 +117,7 @@
           }
         },
         "server": {
-          "builder": "@angular-devkit/build-angular:server",
+          "builder": "nyan-builder:server",
           "options": {
             "outputPath": "dist/server",
             "main": "src/main.server.ts",
