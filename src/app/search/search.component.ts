@@ -21,7 +21,7 @@ export class SearchComponent {
     public snackBar: MatSnackBar
   ) {}
 
-  onKey (box) {
+  onKey(box) {
     box.blur();
     const value = box.value;
 
@@ -39,12 +39,12 @@ export class SearchComponent {
 
     this.http.get(`/?url=${apiURL}`)
       .subscribe(res => {
-        const data = res['data'];
+        const data = res.data;
 
-        this.query = data['query'];
+        this.query = data.query;
 
-        if (data['entries'] && data['entries'].length) {
-          this.entries = data['entries'];
+        if (data.entries && data.entries.length) {
+          this.entries = data.entries;
         } else {
           this.snackBar.open(`未查到关键词 ${value}`, '', {
             verticalPosition: 'top',
@@ -52,13 +52,13 @@ export class SearchComponent {
           });
         }
 
-        if (data['language']) {
-          this.language = data['language'];
+        if (data.language) {
+          this.language = data.language;
         }
       });
   }
 
-  gotoDetail ({ entry }: { entry: string }): void {
+  gotoDetail({ entry }: { entry: string }): void {
     this.router.navigate([`/detail/${entry}`]);
   }
 }

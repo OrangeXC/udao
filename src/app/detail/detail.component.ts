@@ -71,63 +71,63 @@ export class DetailComponent implements OnInit, OnDestroy {
     private router: Router
   ) {}
 
-  transData (res) {
-    this.input = res['input'];
+  transData(res) {
+    this.input = res.input;
 
-    this.simple = res['simple'] ? res['simple'] : {
+    this.simple = res.simple ? res.simple : {
       query: '',
       word: [{}]
     };
 
-    this.ec = res['ec'] && res['ec']['word'] && res['ec']['word'][0] && Array.isArray(res['ec']['word'][0]['trs'])
-      ? res['ec']['word'][0]['trs'].map(item => item['tr'][0]['l']['i'][0])
+    this.ec = res.ec && res.ec.word && res.ec.word[0] && Array.isArray(res.ec.word[0].trs)
+      ? res.ec.word[0].trs.map(item => item.tr[0].l.i[0])
       : [];
 
-    this.webTrans = res['web_trans'] && res['web_trans']['web-translation']
-      ? res['web_trans']['web-translation']
+    this.webTrans = res.web_trans && res.web_trans['web-translation']
+      ? res.web_trans['web-translation']
       : [];
 
-    this.special = res['special'] ? res['special'] : {};
+    this.special = res.special ? res.special : {};
 
-    this.ee = res['ee'] ? res['ee'] : {};
+    this.ee = res.ee ? res.ee : {};
 
-    this.ec21 = res['ec21'] && res['ec21']['word']
-      ? res['ec21']['word']
+    this.ec21 = res.ec21 && res.ec21.word
+      ? res.ec21.word
       : [];
 
-    this.collins = res['collins'] && res['collins']['collins_entries'] && res['collins']['collins_entries'][0]
-      ? res['collins']['collins_entries'][0]
+    this.collins = res.collins && res.collins.collins_entries && res.collins.collins_entries[0]
+      ? res.collins.collins_entries[0]
       : {};
 
-    this.phrs = res['phrs'] && res['phrs']['phrs']
-      ? res['phrs']['phrs']
+    this.phrs = res.phrs && res.phrs.phrs
+      ? res.phrs.phrs
       : [];
 
-    this.syno = res['syno'] && res['syno']['synos']
-      ? res['syno']['synos']
+    this.syno = res.syno && res.syno.synos
+      ? res.syno.synos
       : [];
 
-    this.relWord = res['rel_word'] ? res['rel_word'] : {};
+    this.relWord = res.rel_word ? res.rel_word : {};
 
-    this.blngSentsPart = res['blng_sents_part'] && res['blng_sents_part']['sentence-pair']
-      ? res['blng_sents_part']['sentence-pair']
+    this.blngSentsPart = res.blng_sents_part && res.blng_sents_part['sentence-pair']
+      ? res.blng_sents_part['sentence-pair']
       : [];
 
-    this.authSentsPart = res['auth_sents_part'] && res['auth_sents_part']['sent']
-      ? res['auth_sents_part']['sent']
+    this.authSentsPart = res.auth_sents_part && res.auth_sents_part.sent
+      ? res.auth_sents_part.sent
       : [];
 
-    this.mediaSentsPart = res['media_sents_part'] && res['media_sents_part']['sent']
-      ? res['media_sents_part']['sent']
+    this.mediaSentsPart = res.media_sents_part && res.media_sents_part.sent
+      ? res.media_sents_part.sent
       : [];
   }
 
-  ngOnInit (): void {
+  ngOnInit(): void {
     this.details = this.state.get(DETAIL_KEY, null as any);
 
     if (!this.details) {
       this.route.params.subscribe((params) => {
-        const apiURL = `https://dict.youdao.com/jsonapi?q=${params['word']}`;
+        const apiURL = `https://dict.youdao.com/jsonapi?q=${params.word}`;
 
         this.http.get(`/?url=${encodeURIComponent(apiURL)}`)
         .subscribe(res => {
@@ -140,7 +140,7 @@ export class DetailComponent implements OnInit, OnDestroy {
     }
   }
 
-  ngOnDestroy (): void {
+  ngOnDestroy(): void {
     if (typeof window === 'object') {
       this.state.set(DETAIL_KEY, null as any);
     }

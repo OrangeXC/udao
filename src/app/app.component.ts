@@ -14,7 +14,7 @@ interface NavItem {
 })
 
 export class AppComponent implements OnInit {
-  matches: Boolean = true;
+  matches = true;
   navList: Array<NavItem> = [
     {
       name: '主页',
@@ -33,7 +33,7 @@ export class AppComponent implements OnInit {
 
   constructor(public breakpointObserver: BreakpointObserver) {}
 
-  ngOnInit (): void {
+  ngOnInit(): void {
     this.breakpointObserver
       .observe(['(max-width: 600px)'])
       .subscribe((state: BreakpointState) => {
