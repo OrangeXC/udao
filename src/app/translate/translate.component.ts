@@ -36,18 +36,18 @@ export class TranslateComponent {
 
     this.http.get(`/?url=${apiURL}`)
       .subscribe(data => {
-        this.query = data.query;
+        this.query = data['query'];
 
-        if (data.basic && data.basic.explains) {
-          this.explains = data.basic.explains;
+        if (data['basic'] && data['basic']['explains']) {
+          this.explains = data['basic']['explains'];
         }
 
-        if (data.translation) {
-          this.translation = data.translation;
+        if (data['translation']) {
+          this.translation = data['translation'];
         }
 
-        if (data.web) {
-          this.web = data.web;
+        if (data['web']) {
+          this.web = data['web'];
         }
       });
   }
