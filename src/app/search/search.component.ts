@@ -39,9 +39,9 @@ export class SearchComponent {
 
     this.http.get(`/?url=${apiURL}`)
       .subscribe(res => {
-        const data = res['data'];
+        const data = res.data;
 
-        this.query = data['query'];
+        this.query = data.query;
 
         if (data.entries && data.entries.length) {
           this.entries = data.entries;
