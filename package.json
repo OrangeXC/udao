@@ -7,7 +7,7 @@
     "dev": "ng serve",
     "start": "node dist/server.js",
     "test": "ng test",
-    "lint": "ng lint --fix",
+    "lint": "ng lint",
     "e2e": "ng e2e",
     "build:ssr": "npm run build:client-and-server-bundles && npm run webpack:server",
     "build:client-and-server-bundles": "ng build --prod && ng run udao:server",
