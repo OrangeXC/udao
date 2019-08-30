@@ -26,7 +26,7 @@
     "@angular/platform-browser": "8.2.4",
     "@angular/platform-browser-dynamic": "8.2.4",
     "@angular/platform-server": "8.2.4",
-    "@angular/pwa": "0.803.1",
+    "@angular/pwa": "0.803.2",
     "@angular/router": "8.2.4",
     "@angular/service-worker": "8.2.4",
     "@nguniversal/express-engine": "8.1.1",
@@ -42,8 +42,8 @@
     "zone.js": "0.10.2"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "0.803.1",
-    "@angular/cli": "8.3.1",
+    "@angular-devkit/build-angular": "0.803.2",
+    "@angular/cli": "8.3.2",
     "@angular/compiler-cli": "8.2.4",
     "@angular/language-service": "8.2.4",
     "@types/jasmine": "3.4.0",
