@@ -1,4 +1,11 @@
-# Udao
+<p align="center"><img width="100" src="https://i.loli.net/2019/09/02/fjRVbwIhckgGeoO.png" alt="udao logo"></p>
+
+<p align="center">
+  <a href="https://travis-ci.com/OrangeXC/udao"><img src="https://travis-ci.com/OrangeXC/udao.svg?branch=master" alt="Build Status"></a>
+  <a href="https://github.com/OrangeXC/udao/blob/master/LICENSE"><img src="https://img.shields.io/github/license/orangexc/udao" alt="GitHub License"></a>
+</p>
+
+## Introduction
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.1.3.
 
@@ -25,3 +32,7 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## License
+
+Udao is [MIT licensed](https://github.com/OrangeXC/udao/blob/master/LICENSE).
