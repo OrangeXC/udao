@@ -33,7 +33,7 @@
     "@nguniversal/module-map-ngfactory-loader": "8.1.1",
     "@ngx-loading-bar/core": "^4.2.0",
     "@ngx-loading-bar/http-client": "4.2.0",
-    "core-js": "3.3.3",
+    "core-js": "3.3.4",
     "express": "4.17.1",
     "hammerjs": "2.0.8",
     "rxjs": "6.5.3",
