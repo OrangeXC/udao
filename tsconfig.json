@@ -2,13 +2,13 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
+    "outDir": "./dist",
     "sourceMap": true,
     "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
     "module": "esnext",
     "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es2015",
     "typeRoots": [
@@ -17,16 +17,10 @@
     "lib": [
       "es2018",
       "dom"
-    ],
-    "paths": {
-      "core-js/es7/reflect": [
-        "node_modules/core-js/proposals/reflect-metadata"
-      ],
-      "core-js/es6/*": ["node_modules/core-js/es"],
-      "core-js/es7/*": ["node_modules/core-js/es"]
-    }
+    ]
   },
   "angularCompilerOptions": {
-    "enableIvy": false
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
