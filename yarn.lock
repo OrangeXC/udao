@@ -2,7 +2,7 @@
 # yarn lockfile v1
 
 
-"@angular-devkit/architect@0.1000.0-rc.0", "@angular-devkit/architect@^0.1000.0-next.0":
+"@angular-devkit/architect@0.1000.0-rc.0", "@angular-devkit/architect@^0.1000.0-rc.0":
   version "0.1000.0-rc.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/architect/-/architect-0.1000.0-rc.0.tgz#80130ac005406d08a801f4a5f29705c8a07b18c3"
   integrity sha512-NGh6Onl0RN4z0fEU7cUUK8AEDjTZdzzgYv2U+/t1AwK8vogsvfwEor7pOKxiCB/MMotpp+/THKTGFPrlvPcUXA==
@@ -100,7 +100,7 @@
     "@angular-devkit/core" "10.0.0-rc.0"
     rxjs "6.5.5"
 
-"@angular-devkit/core@10.0.0-rc.0", "@angular-devkit/core@^10.0.0-next.0":
+"@angular-devkit/core@10.0.0-rc.0", "@angular-devkit/core@^10.0.0-rc.0":
   version "10.0.0-rc.0"
   resolved "https://registry.yarnpkg.com/@angular-devkit/core/-/core-10.0.0-rc.0.tgz#de44330d2ac6810e958fc8df516b56171577f803"
   integrity sha512-3hHDdWEVhUPzJPHCwV7KyAwPiKBo0SR6nTRxiF6mgR8d87+X+DGhJwB8+g5a7cumRVm8b8CrziCxosQCOR7z+g==
@@ -268,17 +268,17 @@
     "@schematics/angular" "10.0.0-rc.0"
     parse5-html-rewriting-stream "6.0.0"
 
-"@angular/router@10.0.0-rc.0":
-  version "10.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular/router/-/router-10.0.0-rc.0.tgz#b0339e6564302b68707615cde1aaaee7ee91b44b"
-  integrity sha512-sUecjGXThApr6NQlvUjavdaPHpnaDJ4foZmVWAgWHkLHWjH1GMQ18phAa1XbnYpxFP1pjsXip0oXeV3XwwKcyw==
+"@angular/router@10.0.0-rc.1":
+  version "10.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@angular/router/-/router-10.0.0-rc.1.tgz#1681e43e5c8ea19c94d197bd4d5f20b8c2fcdd79"
+  integrity sha512-l8pJtAvnAexxDtJfJP9zf6xUK7gQvGRnsIi1ilqc8jWsza9FH7J9+wLGinToK2Bz/tkWjm8WHp5HAtZtTPq2nw==
   dependencies:
     tslib "^2.0.0"
 
-"@angular/service-worker@10.0.0-rc.0":
-  version "10.0.0-rc.0"
-  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-10.0.0-rc.0.tgz#44f62bfc8a124782e7c27565276cce7eb6bf5ce7"
-  integrity sha512-NXDtCGKlTi2Nzp51NDfnn9YVz0FlTHShsLpUaowLpswJyXMuT4w/q24HfjUCU2GwEJtJnolXT/wUhx9ezyKBRA==
+"@angular/service-worker@10.0.0-rc.1":
+  version "10.0.0-rc.1"
+  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-10.0.0-rc.1.tgz#3e28c5cd912a5d83bb54d1992c1c51027634acca"
+  integrity sha512-OsODySjgV8gjBu/6wAKaJJ188zP5MKmcIJ0SBsW5x2UV7MaiqhyJm3DakWtnFH7OOgrAUUjzb3UIbTu8OeXLrw==
   dependencies:
     tslib "^2.0.0"
 
@@ -1136,30 +1136,33 @@
     rxjs "6.5.5"
     webpack-sources "1.4.3"
 
-"@nguniversal/builders@10.0.0-next.0":
-  version "10.0.0-next.0"
-  resolved "https://registry.yarnpkg.com/@nguniversal/builders/-/builders-10.0.0-next.0.tgz#1254c1a2e70c043e23e6362435d3d61d39d5d522"
-  integrity sha512-Vns2r/G3Cch2JIAlLE2Hp4a1+OdTvv7DNxkYQHJ2QDDVqqx9rI+UzIkEoK9Ngx7lvDefuJRekeuDKeHr+tv5+A==
+"@nguniversal/builders@10.0.0-rc.0":
+  version "10.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/builders/-/builders-10.0.0-rc.0.tgz#4d53c2df689100c40602b5cb41c28a4cebd853a9"
+  integrity sha512-5aBCXSkIa18qmpe5NrUXpGy0IgqilE+ElT0g+xwZBaYK3j3taSTOslqUyuWql5zkIhnIAgbOfGemvOqccrnlBw==
   dependencies:
-    "@angular-devkit/architect" "^0.1000.0-next.0"
-    "@angular-devkit/core" "^10.0.0-next.0"
+    "@angular-devkit/architect" "^0.1000.0-rc.0"
+    "@angular-devkit/core" "^10.0.0-rc.0"
     browser-sync "^2.26.7"
     guess-parser "^0.4.12"
     http-proxy-middleware "^1.0.0"
     rxjs "^6.5.3"
     tree-kill "^1.2.1"
 
-"@nguniversal/common@10.0.0-next.0":
-  version "10.0.0-next.0"
-  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-10.0.0-next.0.tgz#69f8ee03767d33a05fb69b86e7bc4fbbb051cff8"
-  integrity sha512-6IxIl08kxcHK8T0KC9tKjQ5r0R+QoNbxYGThi0OMOO16tf5D9UgKsBKVLM8rcL3JGAUJNUOUDeOg0tP/Pf5nGA==
-
-"@nguniversal/express-engine@10.0.0-next.0":
-  version "10.0.0-next.0"
-  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-10.0.0-next.0.tgz#cc695d93d021803abb04934a401a27eecf22e43d"
-  integrity sha512-S0vZ+b8BZY7X6eTg5S0P+T4Rlb22xRI7fCyQlErlYy6OrGHIAAst19p7S8NDk8suYcfM489btgZMpMwzGWeIEg==
+"@nguniversal/common@10.0.0-rc.0":
+  version "10.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/common/-/common-10.0.0-rc.0.tgz#e469edf121dac248933b3e187c65a239528a79c0"
+  integrity sha512-Zm42aDfXwh1P7Xo6ZIlSeM3naC5qwKSkaZD29vww0jmbJ8fnfKIONdHk/lO36XzheLVnHDeaq8KU15e7EqiCDw==
   dependencies:
-    "@nguniversal/common" "10.0.0-next.0"
+    tslib "^2.0.0"
+
+"@nguniversal/express-engine@10.0.0-rc.0":
+  version "10.0.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@nguniversal/express-engine/-/express-engine-10.0.0-rc.0.tgz#260324d896e0146c7116f1dbd588c35a66857fb0"
+  integrity sha512-uzMl9fRLbJJO8ciAFtkQm7sWNhGNgE4YzShhqL2FKsuqJA1izA/li9iCaZ42rzxLVyywtMrGFzODTrpdSbssRA==
+  dependencies:
+    "@nguniversal/common" "10.0.0-rc.0"
+    tslib "^2.0.0"
 
 "@ngx-loading-bar/core@5.0.0-alpha.2":
   version "5.0.0-alpha.2"
@@ -1289,10 +1292,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-13.13.0.tgz#30d2d09f623fe32cde9cb582c7a6eda2788ce4a8"
   integrity sha512-WE4IOAC6r/yBZss1oQGM5zs2D7RuKR6Q+w+X2SouPofnWn+LbCqClRyhO3ZE7Ix8nmFgo/oVuuE01cJT2XB13A==
 
-"@types/node@14.0.5":
-  version "14.0.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.5.tgz#3d03acd3b3414cf67faf999aed11682ed121f22b"
-  integrity sha512-90hiq6/VqtQgX8Sp0EzeIsv3r+ellbGj4URKj5j30tLlZvRUpnAe9YbYnjl3pJM93GyXU0tghHhvXHq+5rnCKA==
+"@types/node@14.0.6":
+  version "14.0.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-14.0.6.tgz#f9e178b2da31a4b0ec60b64649e244c31ce18daf"
+  integrity sha512-FbNmu4F67d3oZMWBV6Y4MaPER+0EpE9eIYf2yaHhCWovc1dlXCZkqGX4NLHfVVr6umt20TNBdRzrNJIzIKfdbw==
 
 "@types/object-path@^0.11.0":
   version "0.11.0"
@@ -5672,10 +5675,10 @@ karma-chrome-launcher@3.1.0:
   dependencies:
     which "^1.2.1"
 
-karma-coverage-istanbul-reporter@3.0.2:
-  version "3.0.2"
-  resolved "https://registry.yarnpkg.com/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-3.0.2.tgz#b7f3393b13c7e3dafa5410a68d98d327ae21e807"
-  integrity sha512-pg23tKKF867UIJUIZF252cNbiBnuMIPOMkeiULzjysr9K267Js2O/SoQBL1PCPctJVzvhOkE47yQPUKrWtyl6w==
+karma-coverage-istanbul-reporter@3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/karma-coverage-istanbul-reporter/-/karma-coverage-istanbul-reporter-3.0.3.tgz#f3b5303553aadc8e681d40d360dfdc19bc7e9fe9"
+  integrity sha512-wE4VFhG/QZv2Y4CdAYWDbMmcAHeS926ZIji4z+FkB2aF/EposRb6DP6G5ncT/wXhqUfAb/d7kZrNKPonbvsATw==
   dependencies:
     istanbul-lib-coverage "^3.0.0"
     istanbul-lib-report "^3.0.0"
@@ -5688,10 +5691,10 @@ karma-jasmine-html-reporter@1.5.4:
   resolved "https://registry.yarnpkg.com/karma-jasmine-html-reporter/-/karma-jasmine-html-reporter-1.5.4.tgz#669f33d694d88fce1b0ccfda57111de716cb0192"
   integrity sha512-PtilRLno5O6wH3lDihRnz0Ba8oSn0YUJqKjjux1peoYGwo0AQqrWRbdWk/RLzcGlb+onTyXAnHl6M+Hu3UxG/Q==
 
-karma-jasmine@3.2.0:
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-3.2.0.tgz#61ca8e881db3a92dfe456c9a8c4bef2a8fbf0f94"
-  integrity sha512-NkMgcMVKZJ2LtxWXXWD+d6OSFf8ehjxhfgpjdx9DgjwpLDpirm66kEc7+S0i4HcTJzgNhyTWutDzzfnbvKJpNg==
+karma-jasmine@3.3.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/karma-jasmine/-/karma-jasmine-3.3.1.tgz#c01b1a2ec973e1531c1f6535e1d7d66b8e4275c2"
+  integrity sha512-Nxh7eX9mOQMyK0VSsMxdod+bcqrR/ikrmEiWj5M6fwuQ7oI+YEF1FckaDsWfs6TIpULm9f0fTKMjF7XcrvWyqQ==
   dependencies:
     jasmine-core "^3.5.0"
 
@@ -9459,10 +9462,10 @@ ts-loader@7.0.5:
     micromatch "^4.0.0"
     semver "^6.0.0"
 
-ts-node@8.10.1:
-  version "8.10.1"
-  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.10.1.tgz#77da0366ff8afbe733596361d2df9a60fc9c9bd3"
-  integrity sha512-bdNz1L4ekHiJul6SHtZWs1ujEKERJnHs4HxN7rjTyyVOFf3HaJ6sLqe6aPG62XTzAB/63pKRh5jTSWL0D7bsvw==
+ts-node@8.10.2:
+  version "8.10.2"
+  resolved "https://registry.yarnpkg.com/ts-node/-/ts-node-8.10.2.tgz#eee03764633b1234ddd37f8db9ec10b75ec7fb8d"
+  integrity sha512-ISJJGgkIpDdBhWVu3jufsWpK3Rzo7bdiIXJjQc0ynKxVOVcg2oIrf2H2cejminGrptVc6q6/uynAHNCuWGbpVA==
   dependencies:
     arg "^4.1.0"
     diff "^4.0.1"
