@@ -1,6 +1,13 @@
 <h2>{{ input }}</h2>
 <p>
-  <span class="mr-3" *ngIf="simple.word[0].ukphone">英 [{{ simple.word[0].ukphone }}]</span>
-  <span *ngIf="simple.word[0].usphone">美 [{{ simple.word[0].usphone }}]</span>
+  <span class="mr-3"
+    *ngIf="simple.word[0].ukphone">
+    英 [{{ simple.word[0].ukphone }}]
+  </span>
+  <span *ngIf="simple.word[0].usphone">
+    美 [{{ simple.word[0].usphone }}]
+  </span>
 </p>
-<p *ngFor="let item of ec"><b>{{ item }}</b></p>
+<p *ngFor="let item of ec">
+  <b>{{ item }}</b>
+</p>

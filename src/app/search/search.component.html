@@ -1,15 +1,28 @@
 <div class="main-content">
-  <p class="lead text-center">英文单词模糊搜索</p>
+  <p class="lead text-center">
+    英文单词模糊搜索
+  </p>
   <mat-form-field class="full-width">
-    <input type="search" matInput placeholder="请输入模糊搜索关键字" #box (keyup.enter)="onKey(box)">
+    <input #box
+      matInput
+      type="search"
+      placeholder="请输入模糊搜索关键字"
+      (keyup.enter)="onKey(box)" />
   </mat-form-field>
   <div class="result-wrap" *ngIf="query">
     <div *ngIf="entries.length">
-      <h5 class="text-center">搜索结果({{ entries.length }})</h5>
+      <h5 class="text-center">
+        搜索结果({{ entries.length }})
+      </h5>
       <mat-list>
-        <mat-list-item *ngFor="let item of entries" (click)="gotoDetail(item)">
-          <h3 matLine> {{ item.entry }} </h3>
-          <p matLine> {{ item.explain }} </p>
+        <mat-list-item *ngFor="let item of entries"
+          (click)="gotoDetail(item)">
+          <h3 matLine>
+            {{ item.entry }}
+          </h3>
+          <p matLine>
+            {{ item.explain }}
+          </p>
         </mat-list-item>
       </mat-list>
     </div>
