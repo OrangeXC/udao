@@ -1,20 +1,27 @@
 <div class="main-content">
   <p class="lead text-center">目前只支持（英译汉）,Enter 搜索</p>
   <mat-form-field class="full-width">
-    <textarea matInput #box (keyup.enter)="onEnter(box.value)"></textarea>
+    <textarea matInput
+      #box
+      (keyup.enter)="onEnter(box.value)"></textarea>
   </mat-form-field>
-  <div class="translated" *ngIf="query">
+  <div class="translated"
+    *ngIf="query">
     <h3>{{ query }}</h3>
     <div *ngIf="translation.length">
       <h5>翻译</h5>
       <mat-list>
-        <mat-list-item *ngFor="let item of translation">{{ item }}</mat-list-item>
+        <mat-list-item *ngFor="let item of translation">
+          {{ item }}
+        </mat-list-item>
       </mat-list>
     </div>
     <div *ngIf="explains.length">
       <h5>解释</h5>
       <mat-list>
-        <mat-list-item *ngFor="let item of explains">{{ item }}</mat-list-item>
+        <mat-list-item *ngFor="let item of explains">
+          {{ item }}
+        </mat-list-item>
       </mat-list>
     </div>
     <div *ngIf="web.length">

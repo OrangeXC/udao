@@ -1,6 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { TransferState, makeStateKey } from '@angular/platform-browser';
 
 const DETAIL_KEY = makeStateKey('detail');
@@ -68,7 +68,6 @@ export class DetailComponent implements OnInit, OnDestroy {
     private http: HttpClient,
     private state: TransferState,
     private route: ActivatedRoute,
-    private router: Router
   ) {}
 
   transData(res) {

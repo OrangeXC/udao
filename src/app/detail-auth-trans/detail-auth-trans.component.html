@@ -1,16 +1,26 @@
 <mat-tab-group [dynamicHeight]="true">
-  <mat-tab label="21世纪大英汉词典" *ngIf="ec21 && ec21.length">
+  <mat-tab label="21世纪大英汉词典"
+    *ngIf="ec21 && ec21.length">
     <p>
       <b>{{ ec21[0]['return-phrase'].l.i[0] }}</b>
-      <span class="text-muted" *ngIf="ec21[0].phone">[{{ ec21[0].phone }}]</span>
+      <span class="text-muted"
+        *ngIf="ec21[0].phone">
+        [{{ ec21[0].phone }}]
+      </span>
     </p>
-    <ng-template ngFor let-trs [ngForOf]="ec21[0].trs">
+    <ng-template ngFor
+      let-trs
+      [ngForOf]="ec21[0].trs">
       <p>{{ trs.pos }}</p>
       <ol>
-        <ng-template ngFor let-tr [ngForOf]="trs.tr">
+        <ng-template ngFor
+          let-tr
+          [ngForOf]="trs.tr">
           <li *ngIf="tr.l.i">
             <p>{{ tr.l.i[0] }}</p>
-            <ng-template ngFor let-exam [ngForOf]="tr.exam">
+            <ng-template ngFor
+              let-exam
+              [ngForOf]="tr.exam">
               <p class="text-muted">{{ exam.i.f.l.i }}</p>
               <p class="text-muted">{{ exam.i.n.l.i }}</p>
             </ng-template>
@@ -23,14 +33,21 @@
         <ng-template [ngIf]="i > 0">
           <p>
             <b>{{ item['return-phrase'].l.i[0] }}</b>
-            <span class="text-muted" *ngIf="item.phone">[{{ item.phone }}]</span>
+            <span class="text-muted"
+              *ngIf="item.phone">
+              [{{ item.phone }}]
+            </span>
           </p>
-          <ng-template ngFor let-trs [ngForOf]="item.trs">
+          <ng-template ngFor
+            let-trs
+            [ngForOf]="item.trs">
             <p>{{ trs.pos }}</p>
             <ol>
               <li *ngFor="let tr of trs.tr">
                 <p>{{ tr.l.i[0] }}</p>
-                <ng-template ngFor let-exam [ngForOf]="tr.exam">
+                <ng-template ngFor
+                  let-exam
+                  [ngForOf]="tr.exam">
                   <p class="text-muted">{{ exam.i.f.l.i }}</p>
                   <p class="text-muted">{{ exam.i.n.l.i }}</p>
                 </ng-template>
@@ -50,14 +67,19 @@
     </button>
     <small class="text-muted">以上来源于：《21世纪大英汉词典》</small>
   </mat-tab>
-  <mat-tab label="柯林斯英汉双解大词典" *ngIf="collins && collins.headword">
+  <mat-tab label="柯林斯英汉双解大词典"
+    *ngIf="collins && collins.headword">
     <p>
       <b class="text-danger">{{ collins.headword }}</b> -
       <i class="text-muted">{{ collins.phonetic }}</i> -
       <b>{{collins.star}}⭐</b> -
       <b>{{ collins['basic_entries']['basic_entry'][0].cet }}</b> -
-      <small class="text-muted" *ngIf="collins['basic_entries']['basic_entry'][0].wordforms && collins['basic_entries']['basic_entry'][0].wordforms.wordform">(
-        <ng-template ngFor let-wordform [ngForOf]="collins['basic_entries']['basic_entry'][0].wordforms.wordform" let-isLast="last">
+      <small class="text-muted"
+        *ngIf="collins['basic_entries']['basic_entry'][0].wordforms && collins['basic_entries']['basic_entry'][0].wordforms.wordform">(
+        <ng-template ngFor
+          let-wordform
+          [ngForOf]="collins['basic_entries']['basic_entry'][0].wordforms.wordform"
+          let-isLast="last">
           {{ wordform.word }}<ng-template [ngIf]="!isLast">, </ng-template>
         </ng-template>
       )</small>
@@ -65,9 +87,16 @@
     <ol>
       <li *ngFor="let entry of collins.entries.entry">
         <ng-template [ngIf]="entry['tran_entry'][0]['pos_entry'] && entry['tran_entry'][0]['pos_entry'].pos">
-          <p>{{ entry['tran_entry'][0]['pos_entry'].pos }} <span class="text-success" [innerHTML]="entry['tran_entry'][0].tran"></span></p>
+          <p>
+            {{ entry['tran_entry'][0]['pos_entry'].pos }}
+            <span class="text-success"
+              [innerHTML]="entry['tran_entry'][0].tran">
+            </span>
+          </p>
           <ng-template [ngIf]="entry['tran_entry'][0]['exam_sents'] && entry['tran_entry'][0]['exam_sents']['sent']">
-            <ng-template ngFor let-exam [ngForOf]="entry['tran_entry'][0]['exam_sents']['sent']">
+            <ng-template ngFor
+              let-exam
+              [ngForOf]="entry['tran_entry'][0]['exam_sents']['sent']">
               <p>例：</p>
               <p>{{ exam.eng_sent }}</p>
               <p>{{ exam.chn_sent }}</p>

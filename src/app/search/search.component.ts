@@ -22,16 +22,15 @@ export class SearchComponent {
   ) {}
 
   onKey(box) {
-    box.blur();
-    const value = box.value;
+    const { blur, value } = box
 
     this.query = '';
     this.entries = [];
     this.language = '';
 
-    if (!value) {
-      return;
-    }
+    blur();
+
+    if (!value) return;
 
     // before 2017-12
     // after can use https://github.com/jokermonn/-Api/blob/master/KingsoftDic.md

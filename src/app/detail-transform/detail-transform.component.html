@@ -1,26 +1,46 @@
 <mat-tab-group [dynamicHeight]="true">
-  <mat-tab label="词组短语" *ngIf="phrs && phrs.length">
+  <mat-tab label="词组短语"
+    *ngIf="phrs && phrs.length">
     <p *ngFor="let phr of phrs">
-      <a [routerLink]="['/detail', phr.phr.headword.l.i]">{{ phr.phr.headword.l.i }}</a>
+      <a [routerLink]="['/detail', phr.phr.headword.l.i]">
+        {{ phr.phr.headword.l.i }}
+      </a>
       <span>{{ phr.phr.trs[0].tr.l.i }}</span>
     </p>
   </mat-tab>
-  <mat-tab label="同近义词" *ngIf="syno && syno.length">
-    <ng-template ngFor let-item [ngForOf]="syno">
-      <p>{{ item.syno.pos }} {{ item.syno.tran }}</p>
+  <mat-tab label="同近义词"
+    *ngIf="syno && syno.length">
+    <ng-template ngFor
+      let-item
+      [ngForOf]="syno">
       <p>
-        <ng-template ngFor let-word [ngForOf]="item.syno.ws" let-isLast="last">
-          <a [routerLink]="['/detail', word.w]">{{ word.w }}</a><ng-template [ngIf]="!isLast">, </ng-template>
+          {{ item.syno.pos }}
+          {{ item.syno.tran }}
+      </p>
+      <p>
+        <ng-template ngFor
+          let-word
+          [ngForOf]="item.syno.ws"
+          let-isLast="last">
+          <a [routerLink]="['/detail', word.w]">
+            {{ word.w }}
+          </a>
+          <ng-template [ngIf]="!isLast">, </ng-template>
         </ng-template>
       </p>
     </ng-template>
   </mat-tab>
-  <mat-tab label="同根词" *ngIf="relWord && relWord.rels">
+  <mat-tab label="同根词"
+    *ngIf="relWord && relWord.rels">
     <p>词根：{{ relWord.word }}</p>
-    <ng-template ngFor let-item [ngForOf]="relWord.rels">
+    <ng-template ngFor
+      let-item
+      [ngForOf]="relWord.rels">
       <p>{{ item.rel.pos }}</p>
       <p *ngFor="let word of item.rel.words">
-        <a [routerLink]="['/detail', word.word]">{{ word.word }}</a>
+        <a [routerLink]="['/detail', word.word]">
+          {{ word.word }}
+        </a>
         {{ word.tran }}
       </p>
     </ng-template>

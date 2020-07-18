@@ -1,5 +1,6 @@
 <mat-tab-group [dynamicHeight]="true">
-  <mat-tab label="网络释义" *ngIf="webTrans && webTrans.length">
+  <mat-tab label="网络释义"
+    *ngIf="webTrans && webTrans.length">
     <h5>释义</h5>
     <mat-list *ngIf="webTrans.length">
       <mat-list-item *ngFor="let item of webTrans[0].trans; index as i">
@@ -11,10 +12,16 @@
     </mat-list>
     <div *ngIf="webTrans.length > 1">
       <h5>短语</h5>
-      <ng-template ngFor let-item [ngForOf]="webTrans" let-index="index">
+      <ng-template ngFor
+        let-item
+        [ngForOf]="webTrans"
+        let-index="index">
         <p *ngIf="index > 0">
           <a [routerLink]="['/detail', item.key]">{{ item.key }}</a>
-          <ng-template ngFor let-trans [ngForOf]="item.trans" let-i="index">
+          <ng-template ngFor
+            let-trans
+            [ngForOf]="item.trans"
+            let-i="index">
             <span *ngIf="trans.value">{{ trans.value }}</span>
             <ng-template [ngIf]="item.trans.length !== i + 1">；</ng-template>
           </ng-template>
@@ -22,42 +29,77 @@
       </ng-template>
     </div>
   </mat-tab>
-  <mat-tab label="专业释义" *ngIf="special && special.entries">
+  <mat-tab label="专业释义"
+    *ngIf="special && special.entries">
     <mat-tab-group [dynamicHeight]="true">
-      <ng-template ngFor let-item [ngForOf]="special.entries" let-i="index">
+      <ng-template ngFor
+        let-item
+        [ngForOf]="special.entries"
+        let-i="index">
         <mat-tab label="{{ item.entry.major }}">
-          <ng-template ngFor let-trItem [ngForOf]="item.entry.trs">
-            <h6>{{ trItem.tr.nat }}<small class="text-muted" *ngIf="trItem.tr.cite !== '0'">- 引用次数：{{ trItem.tr.cite }}</small></h6>
+          <ng-template ngFor
+            let-trItem
+            [ngForOf]="item.entry.trs">
+            <h6>
+              {{ trItem.tr.nat }}
+              <small class="text-muted"
+                *ngIf="trItem.tr.cite !== '0'">
+                - 引用次数：{{ trItem.tr.cite }}
+              </small>
+            </h6>
             <p [innerHTML]="trItem.tr.engSent"></p>
             <p [innerHTML]="trItem.tr.chnSent"></p>
-            <small *ngIf="trItem.tr.docTitle">参考来源 - {{ trItem.tr.docTitle }}</small>
+            <small *ngIf="trItem.tr.docTitle">
+              参考来源 - {{ trItem.tr.docTitle }}
+            </small>
           </ng-template>
         </mat-tab>
       </ng-template>
     </mat-tab-group>
-    <small class="text-muted" *ngIf="special.summary && special.summary.text">
+    <small class="text-muted"
+      *ngIf="special.summary && special.summary.text">
       ·{{ special.summary.text }}
-      <a href="{{ special.summary.sources.source.url }}" target="_blank">
+      <a href="{{ special.summary.sources.source.url }}"
+        target="_blank">
         {{ special.summary.sources.source.site }}
       </a>
     </small>
   </mat-tab>
   <mat-tab label="英英释义" *ngIf="ee && ee.word">
-    <h6>{{ ee.word.speech }} <span class="text-muted" *ngIf="ee.word.phone">[{{ ee.word.phone }}]</span></h6>
-    <ng-template ngFor let-item [ngForOf]="ee.word.trs">
+    <h6>
+      {{ ee.word.speech }}
+      <span class="text-muted"
+        *ngIf="ee.word.phone">
+        [{{ ee.word.phone }}]
+      </span>
+    </h6>
+    <ng-template
+      ngFor
+      let-item
+      [ngForOf]="ee.word.trs">
       <p>{{ item.pos }}</p>
       <ol>
         <li *ngFor="let tr of item.tr">
           <p>{{ tr.l.i }}</p>
-          <p class="text-muted font-italic" *ngIf="tr.exam">
-            <ng-template ngFor let-exam [ngForOf]="tr.exam.i.f.l" let-i="index">
-              {{ exam.i }}<ng-template [ngIf]="tr.exam.i.f.l.length !== i + 1">;</ng-template>
+          <p class="text-muted font-italic"
+            *ngIf="tr.exam">
+            <ng-template ngFor
+              let-exam
+              [ngForOf]="tr.exam.i.f.l"
+              let-i="index">
+              {{ exam.i }}
+              <ng-template [ngIf]="tr.exam.i.f.l.length !== i + 1">;</ng-template>
             </ng-template>
           </p>
-          <p class="text-muted" *ngIf="tr['similar-words']">
+          <p class="text-muted"
+            *ngIf="tr['similar-words']">
             同义词：
-            <ng-template ngFor let-word [ngForOf]="tr['similar-words']">
-              <a [routerLink]="['/detail', word.similar]">{{ word.similar }}</a>
+            <ng-template ngFor
+              let-word
+              [ngForOf]="tr['similar-words']">
+              <a [routerLink]="['/detail', word.similar]">
+                {{ word.similar }}
+              </a>
             </ng-template>
           </p>
         </li>
@@ -65,7 +107,8 @@
     </ng-template>
     <small class="text-muted">
       以上来源于:
-      <a href="{{ ee.source.url }}" target="_blank">
+      <a href="{{ ee.source.url }}"
+        target="_blank">
         {{ ee.source.name }}
       </a>
     </small>

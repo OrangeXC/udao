@@ -1,23 +1,39 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div class="home-container" [class.home-is-mobile]="matches">
-  <mat-toolbar color="primary" class="home-toolbar">
-    <button mat-icon-button (click)="snav.toggle()"><mat-icon>menu</mat-icon></button>
+<div class="home-container"
+  [class.home-is-mobile]="matches">
+  <mat-toolbar color="primary"
+    class="home-toolbar">
+    <button mat-icon-button
+      (click)="snav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
     <h1 class="home-app-name">Udao translate</h1>
     <span class="toolbar-spacer"></span>
-    <a class="github-button" href="https://github.com/OrangeXC/udao"><img src="../assets/brand/github.png" alt="github"></a>
+    <a class="github-button"
+      href="https://github.com/OrangeXC/udao">
+      <img src="../assets/brand/github.png"
+        alt="github">
+    </a>
   </mat-toolbar>
 
   <mat-sidenav-container class="home-sidenav-container"
-                         [style.marginTop.px]="matches ? 56 : 0">
+    [style.marginTop.px]="matches ? 56 : 0">
     <mat-sidenav #snav
-                 [mode]="matches ? 'over' : 'side'"
-                 [fixedInViewport]="matches"
-                 fixedTopGap="56"
-                 [opened]="matches ? false : true">
+      [mode]="matches ? 'over' : 'side'"
+      [fixedInViewport]="matches"
+      fixedTopGap="56"
+      [opened]="matches ? false : true">
       <mat-nav-list>
         <ul class="side-nav">
-          <li *ngFor="let item of navList" (click)="matches && snav.toggle()">
-            <a mat-list-item routerLink="{{ item.link }}" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><mat-icon>{{ item.icon }}</mat-icon> {{ item.name }}</a>
+          <li *ngFor="let item of navList"
+            (click)="matches && snav.toggle()">
+            <a mat-list-item
+              routerLink="{{ item.link }}"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{exact: true}">
+              <mat-icon>{{ item.icon }}</mat-icon>
+              {{ item.name }}
+            </a>
           </li>
         </ul>
       </mat-nav-list>
@@ -27,5 +43,7 @@
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  <ngx-loading-bar [color]="'#ff4081'" [includeSpinner]="false"></ngx-loading-bar>
+  <ngx-loading-bar [color]="'#ff4081'"
+    [includeSpinner]="false">
+  </ngx-loading-bar>
 </div>
