@@ -126,10 +126,11 @@ export class DetailComponent implements OnInit, OnDestroy {
 
     if (!this.details) {
       this.route.params.subscribe((params) => {
-        const apiURL = `https://dict.youdao.com/jsonapi?q=${params.word}`;
-
-        this.http.get(`/?url=${encodeURIComponent(apiURL)}`)
-        .subscribe(res => {
+        this.http.get('/api/dict/jsonapi', {
+          params: {
+            q: encodeURIComponent(params.word)
+          }
+        }).subscribe(res => {
           this.transData(res);
           this.state.set(DETAIL_KEY, res as any);
         });
