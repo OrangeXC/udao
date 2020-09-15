@@ -1,6 +1,7 @@
 import 'zone.js/dist/zone-node';
 
 import { ngExpressEngine } from '@nguniversal/express-engine';
+import { createProxyMiddleware } from 'http-proxy-middleware';
 import * as express from 'express';
 import { join } from 'path';
 
@@ -13,6 +14,14 @@ export function app() {
   const server = express();
   const distFolder = join(process.cwd(), 'dist/udao/browser');
   const indexHtml = existsSync(join(distFolder, 'index.original.html')) ? 'index.original.html' : 'index';
+  const proxyOptions = {
+    changeOrigin: true,
+    secure: false,
+    pathRewrite: {
+      "^/api/fanyi": '',
+      "^/api/dict": ''
+    }
+  }
 
   // Our Universal express-engine (found @ https://github.com/angular/universal/tree/master/modules/express-engine)
   server.engine('html', ngExpressEngine({
@@ -22,8 +31,17 @@ export function app() {
   server.set('view engine', 'html');
   server.set('views', distFolder);
 
-  // Example Express Rest API endpoints
-  // app.get('/api/**', (req, res) => { });
+  // Api proxy
+  server.use('/api/fanyi', createProxyMiddleware({
+    ...proxyOptions,
+    target: 'https://fanyi.youdao.com'
+  }));
+
+  server.use('/api/dict', createProxyMiddleware({
+    ...proxyOptions,
+    target: 'https://dict.youdao.com'
+  }));
+
   // Serve static files from /browser
   server.get('*.*', express.static(distFolder, {
     maxAge: '1y'

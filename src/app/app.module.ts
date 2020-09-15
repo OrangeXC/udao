@@ -2,19 +2,13 @@ import { BrowserModule, BrowserTransferStateModule } from '@angular/platform-bro
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   NgModule,
-  Injectable,
   Inject,
   PLATFORM_ID,
   APP_ID
 } from '@angular/core';
 import { isPlatformBrowser } from '@angular/common';
 import {
-  HttpClientModule,
-  HttpRequest,
-  HttpInterceptor,
-  HttpHandler,
-  HttpEvent,
-  HTTP_INTERCEPTORS
+  HttpClientModule
 } from '@angular/common/http';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
@@ -34,21 +28,6 @@ import { DetailWebTransComponent } from './detail-web-trans/detail-web-trans.com
 import { DetailAuthTransComponent } from './detail-auth-trans/detail-auth-trans.component';
 import { DetailTransformComponent } from './detail-transform/detail-transform.component';
 import { DetailExamplesComponent } from './detail-examples/detail-examples.component';
-
-import { Observable } from 'rxjs';
-
-@Injectable()
-export class Interceptor implements HttpInterceptor {
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const url = 'https://proxy-oagpwnbkpe.now.sh';
-
-    req = req.clone({
-      url: url + req.url
-    });
-
-    return next.handle(req);
-  }
-}
 
 @NgModule({
   imports: [
@@ -74,8 +53,7 @@ export class Interceptor implements HttpInterceptor {
     DetailExamplesComponent
   ],
   providers: [
-    AppComponent,
-    { provide: HTTP_INTERCEPTORS, useClass: Interceptor, multi: true }
+    AppComponent
   ],
   bootstrap: [ AppComponent ]
 })

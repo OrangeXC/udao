@@ -3,11 +3,11 @@
     英文单词模糊搜索
   </p>
   <mat-form-field class="full-width">
-    <input #box
+    <input #search
       matInput
       type="search"
       placeholder="请输入模糊搜索关键字"
-      (keyup.enter)="onKey(box)" />
+      (keyup.enter)="onKey(search.value)" />
   </mat-form-field>
   <div class="result-wrap" *ngIf="query">
     <div *ngIf="entries.length">
